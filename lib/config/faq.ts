@@ -42,6 +42,6 @@ export const faqItems: FaqItem[] = [
     id: "payment",
     question: "What payment methods do you accept?",
     answer:
-      "Order via WhatsApp for direct Gauteng delivery — payment details confirmed when you message us. For nationwide orders, Bobshop accepts card, EFT, and other marketplace payment options.",
+      "Checkout online via PayFast (card, EFT, Instant EFT) or PayPal for Gauteng delivery. You can also order via WhatsApp — payment details confirmed when you message us. For nationwide orders, Bobshop accepts card, EFT, and other marketplace payment options.",
   },
 ];

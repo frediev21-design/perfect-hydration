@@ -12,6 +12,7 @@ export const pricingSection = {
   specialOfferLabel: "Special Offer",
   lineItemLabel: "5L bottle",
   orderNowLabel: "Order Now",
+  checkoutOnlineLabel: "Checkout Online",
   requestQuoteLabel: "Request Quote",
   freeDeliveryLabel: "FREE",
   effectiveCostLabel: "Effective cost per bottle",

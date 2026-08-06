@@ -1,7 +1,9 @@
 export type ConversionEvent =
   | "whatsapp_click"
   | "bobshop_click"
-  | "call_click";
+  | "call_click"
+  | "begin_checkout"
+  | "purchase";
 
 export interface ConversionEventParams {
   source: string;

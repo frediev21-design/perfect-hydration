@@ -4,7 +4,7 @@ export const mainNavLinks: NavLink[] = [
   { label: "Why Us", href: "/#why" },
   { label: "Applications", href: "/#applications" },
   { label: "Pricing", href: "/#pricing" },
-  { label: "Order", href: "/#order" },
+  { label: "Checkout", href: "/checkout" },
   { label: "FAQ", href: "/#faq" },
 ];
 
@@ -36,6 +36,7 @@ export const footerLinkGroups: FooterLinkGroup[] = [
   {
     title: "Contact",
     links: [
+      { label: "Checkout Online", href: "/checkout" },
       { label: "Order via WhatsApp", href: "whatsapp", external: true },
       { label: "Order on Bobshop", href: "bobshop", external: true },
       { label: "Call Us", href: "tel", external: true },

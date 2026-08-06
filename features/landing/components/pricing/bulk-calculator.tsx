@@ -1,6 +1,7 @@
 "use client";
 
-import { FileText, MessageCircle, Minus, Plus } from "lucide-react";
+import { CreditCard, FileText, MessageCircle, Minus, Plus } from "lucide-react";
+import Link from "next/link";
 import { useMemo, useState } from "react";
 
 import { GlassCard } from "@/components/shared/glass-card";
@@ -244,6 +245,26 @@ export function BulkCalculator({
           <Button
             nativeButton={false}
             render={
+              <Link
+                href={`/checkout?qty=${calculation.quantity}`}
+                aria-label="Checkout online"
+                onClick={() => {
+                  trackConversionEvent("begin_checkout", {
+                    source: "bulk_calculator_checkout",
+                    quantity: calculation.quantity,
+                  });
+                }}
+              />
+            }
+            className="h-12 w-full rounded-xl bg-brand-accent text-base font-semibold text-white hover:bg-brand-accent/90"
+          >
+            <CreditCard aria-hidden className="size-5" />
+            {pricingSection.checkoutOnlineLabel}
+          </Button>
+
+          <Button
+            nativeButton={false}
+            render={
               <a
                 href={whatsappOrderUrl}
                 target="_blank"
@@ -257,7 +278,8 @@ export function BulkCalculator({
                 }}
               />
             }
-            className="h-12 w-full rounded-xl bg-brand-accent text-base font-semibold text-white hover:bg-brand-accent/90"
+            variant="outline"
+            className="h-12 w-full rounded-xl border-white/15 bg-transparent text-base font-semibold text-white hover:bg-white/5"
           >
             <MessageCircle aria-hidden className="size-5" />
             {pricingSection.orderNowLabel}
