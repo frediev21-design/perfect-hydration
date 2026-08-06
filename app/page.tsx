@@ -1,6 +1,8 @@
 import { Applications } from "@/features/landing/components/applications/applications";
 import { Comparison } from "@/features/landing/components/comparison/comparison";
+import { Delivery } from "@/features/landing/components/delivery/delivery";
 import { Faq } from "@/features/landing/components/faq/faq";
+import { FinalCta } from "@/features/landing/components/final-cta/final-cta";
 import { Hero } from "@/features/landing/components/hero/hero";
 import { PricingSection } from "@/features/landing/components/pricing/pricing-section";
 import { ProductShowcase } from "@/features/landing/components/product-showcase/product-showcase";
@@ -27,6 +29,8 @@ export default async function HomePage() {
       <Comparison />
       <Testimonials />
       <Faq />
+      <Delivery />
+      <FinalCta whatsappUrl={whatsappUrl} />
     </main>
   );
 }

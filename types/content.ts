@@ -19,3 +19,13 @@ export interface FaqItem {
   question: string;
   answer: string;
 }
+
+export interface DeliveryArea {
+  id: string;
+  name: string;
+  description: string;
+  /** Horizontal position on the map SVG (0–100). */
+  mapX: number;
+  /** Vertical position on the map SVG (0–100). */
+  mapY: number;
+}

@@ -105,7 +105,7 @@ Set environment variables in your hosting dashboard before deploying.
 - Floating bottle with glow, reflection, and mouse parallax
 - Ambient particles, water ripples, and staggered fade-in
 - `id="hero"` section anchor
-- Uses product image at `public/images/bottle-5l-deionized-water.jpeg`
+- Uses product image at `public/images/deionised-water.jpeg`
 
 **Sprint 3 — Trust Bar & Why Us** ✅
 
@@ -132,7 +132,13 @@ Set environment variables in your hosting dashboard before deploying.
 - Auto-scrolling testimonial carousel with glass cards (`id="testimonials"`)
 - Animated FAQ accordion with JSON-LD schema (`id="faq"`)
 
-**Next:** Sprint 7 — Gauteng delivery map, final CTA, and conversion layer
+**Sprint 7 — Delivery Map & Final CTA** ✅
+
+- Stylized Gauteng coverage map with animated delivery pins (`id="delivery"`)
+- Six delivery area cards for major hubs and suburbs
+- Closing conversion section with WhatsApp and call CTAs (`id="order"`)
+
+**Next:** Sprint 8 — Conversion layer (floating WhatsApp, sticky mobile CTA, scroll progress)
 
 ## License
 

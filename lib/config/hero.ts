@@ -1,6 +1,6 @@
 export const assetPaths = {
   product: {
-    bottle5L: "/images/bottle-5l-deionized-water.jpeg",
+    bottle5L: "/images/deionised-water.jpeg",
     bottle5LAlt: "5 litre bottle of Perfect Hydration ultra pure deionized water",
   },
 } as const;
