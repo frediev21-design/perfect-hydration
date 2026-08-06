@@ -127,7 +127,7 @@ export function PricingTierCard({ tier, index }: PricingTierCardProps) {
           className={cn(
             "mt-8 h-11 w-full rounded-xl font-semibold",
             tier.ctaVariant === "primary" &&
-              "bg-brand-success text-white hover:bg-brand-success/90",
+              "bg-brand-accent text-white hover:bg-brand-accent/90",
             tier.ctaVariant === "outline" &&
               "border-white/15 bg-transparent text-white hover:bg-white/5",
             tier.ctaVariant === "default" &&

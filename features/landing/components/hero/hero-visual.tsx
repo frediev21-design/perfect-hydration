@@ -47,7 +47,7 @@ export function HeroVisual() {
       </motion.div>
 
       <motion.div
-        className="relative aspect-square w-full max-w-md"
+        className="relative aspect-[2/3] w-full max-w-md"
         initial={shouldReduceMotion ? false : { opacity: 0, y: 32, scale: 0.96 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
@@ -79,8 +79,8 @@ export function HeroVisual() {
           <Image
             src={assetPaths.product.bottle5L}
             alt={assetPaths.product.bottle5LAlt}
-            width={1254}
-            height={1254}
+            width={681}
+            height={1024}
             priority
             className="h-auto w-full object-contain drop-shadow-[0_30px_60px_rgba(0,174,239,0.28)]"
             sizes="(max-width: 1024px) 80vw, 40vw"

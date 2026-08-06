@@ -4,21 +4,21 @@ export const faqSection = {
   eyebrow: "FAQ",
   title: "Questions & Answers",
   description:
-    "Everything you need to know about ordering ultra pure deionized water from Perfect Hydration.",
+    "Everything you need to know about ordering ultra pure deionised water from Perfect Hydration.",
 } as const;
 
 export const faqItems: FaqItem[] = [
   {
     id: "what-is-deionized-water",
-    question: "What is deionized water?",
+    question: "What is deionised water?",
     answer:
-      "Perfect Hydration Ultra-Pure Deionized Water is produced using Reverse Osmosis (RO) and Deionization (DI) to remove dissolved minerals, salts, and ionic contaminants — resulting in ultra-low conductivity and TDS. See our What is Deionized Water section for full details, quality targets, and applications.",
+      "Perfect Hydration Ultra-Pure Deionised Water is produced using Reverse Osmosis (RO) and Deionization (DI) to remove dissolved minerals, salts, and ionic contaminants — resulting in ultra-low conductivity and TDS. See our What is Deionised Water section for full details, quality targets, and applications.",
   },
   {
     id: "automotive-use",
     question: "Can I use this for car batteries and radiators?",
     answer:
-      "Yes. Perfect Hydration deionized water is automotive grade and suitable for battery top-ups, radiator refills, and coolant mixing where low-mineral water is recommended by manufacturers.",
+      "Yes. Perfect Hydration deionised water is automotive grade and suitable for battery top-ups, radiator refills, and coolant mixing where low-mineral water is recommended by manufacturers.",
   },
   {
     id: "how-to-order",

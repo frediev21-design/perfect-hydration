@@ -10,7 +10,9 @@ export function calculateOrder(
   input: OrderCalculationInput,
 ): OrderCalculation {
   const quantity = Math.max(1, Math.floor(input.quantity));
-  const subtotal = quantity * input.unitPrice;
+  const unitPrice =
+    quantity >= input.bulkThreshold ? input.bulkUnitPrice : input.unitPrice;
+  const subtotal = quantity * unitPrice;
   const vat = subtotal * input.vatRate;
   const deliveryIsFree = quantity >= input.freeDeliveryThreshold;
   const delivery = deliveryIsFree ? 0 : input.deliveryFee;
@@ -18,7 +20,7 @@ export function calculateOrder(
 
   return {
     quantity,
-    unitPrice: input.unitPrice,
+    unitPrice,
     subtotal,
     vat,
     delivery,

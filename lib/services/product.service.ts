@@ -1,17 +1,23 @@
 import type { Product } from "@/types/product";
 
+export const productPricing = {
+  unitPrice: 69,
+  bulkUnitPrice: 65,
+  bulkThreshold: 6,
+} as const;
+
 const deionizedWater5L: Product = {
   id: "deionized-water-5l",
   slug: "deionized-water",
-  name: "Ultra Pure Deionized Water",
-  shortName: "5L Deionized Water",
+  name: "Ultra Pure Deionised Water",
+  shortName: "5L Deionised Water",
   tagline: "Automotive & Industrial Grade",
   grade: "Automotive Grade",
   volumeLitres: 5,
-  price: 69,
+  price: productPricing.unitPrice,
   currency: "ZAR",
   description:
-    "Professional quality deionized water for battery top-up, radiators, coolant mixing, laboratories, and manufacturing.",
+    "Professional quality deionised water for battery top-up, radiators, coolant mixing, laboratories, and manufacturing.",
   applications: [
     "Battery Top-up",
     "Radiators",
@@ -32,10 +38,11 @@ const deionizedWater5L: Product = {
     { label: "pH", value: "5–6.7" },
   ],
   seo: {
-    title: "5L Automotive Grade Deionized Water | Perfect Hydration",
+    title: "5L Automotive Grade Deionised Water | Perfect Hydration",
     description:
-      "Order ultra pure deionized water in Gauteng. R69 per 5L bottle. Fast delivery for workshops, fleets, labs, and industry.",
+      "Order ultra pure deionised water in Gauteng. R69 per 5L bottle. Fast delivery for workshops, fleets, labs, and industry.",
     keywords: [
+      "deionised water",
       "deionized water",
       "automotive grade water",
       "battery top up water",

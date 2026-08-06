@@ -11,12 +11,12 @@ import {
   quantityPresets,
 } from "@/lib/config/pricing";
 import { calculateOrder } from "@/lib/services/order-calculator.service";
+import { productPricing } from "@/lib/services/product.service";
 import { formatCurrency } from "@/lib/utils/format";
 import { buildWhatsAppOrderUrl } from "@/lib/utils/whatsapp";
 import { cn } from "@/lib/utils";
 
 interface BulkCalculatorProps {
-  unitPrice: number;
   vatRate: number;
   deliveryFee: number;
   freeDeliveryThreshold: number;
@@ -47,7 +47,6 @@ function SummaryRow({
 }
 
 export function BulkCalculator({
-  unitPrice,
   vatRate,
   deliveryFee,
   freeDeliveryThreshold,
@@ -58,12 +57,14 @@ export function BulkCalculator({
     () =>
       calculateOrder({
         quantity,
-        unitPrice,
+        unitPrice: productPricing.unitPrice,
+        bulkUnitPrice: productPricing.bulkUnitPrice,
+        bulkThreshold: productPricing.bulkThreshold,
         vatRate,
         deliveryFee,
         freeDeliveryThreshold,
       }),
-    [quantity, unitPrice, vatRate, deliveryFee, freeDeliveryThreshold],
+    [quantity, vatRate, deliveryFee, freeDeliveryThreshold],
   );
 
   const whatsappOrderUrl = buildWhatsAppOrderUrl({
@@ -249,7 +250,7 @@ export function BulkCalculator({
                 aria-label="Order now via WhatsApp"
               />
             }
-            className="h-12 w-full rounded-xl bg-brand-success text-base font-semibold text-white hover:bg-brand-success/90"
+            className="h-12 w-full rounded-xl bg-brand-accent text-base font-semibold text-white hover:bg-brand-accent/90"
           >
             <MessageCircle aria-hidden className="size-5" />
             {pricingSection.orderNowLabel}

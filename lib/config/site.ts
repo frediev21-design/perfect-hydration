@@ -4,7 +4,7 @@ export const siteConfig = {
   name: "Perfect Hydration",
   tagline: "Hydration That Does More",
   description:
-    "Ultra pure automotive grade deionized water for batteries, radiators, laboratories, and industrial applications across Gauteng.",
+    "Ultra pure automotive grade deionised water for batteries, radiators, laboratories, and industrial applications across Gauteng.",
   url: env.NEXT_PUBLIC_SITE_URL,
   locale: "en-ZA",
   currency: "ZAR",

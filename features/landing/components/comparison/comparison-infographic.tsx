@@ -26,6 +26,7 @@ export function ComparisonInfographic() {
         width={infographic.width}
         height={infographic.height}
         sizes="(max-width: 1280px) 100vw, 1152px"
+        loading="lazy"
         className="h-auto w-full rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.45)]"
       />
 

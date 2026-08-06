@@ -3,13 +3,13 @@ import type { FooterLinkGroup, NavLink } from "@/types/navigation";
 export const mainNavLinks: NavLink[] = [
   { label: "Why Us", href: "/#why" },
   { label: "Applications", href: "/#applications" },
-  { label: "Specifications", href: "/#specifications" },
   { label: "Pricing", href: "/#pricing" },
+  { label: "Order", href: "/#order" },
   { label: "FAQ", href: "/#faq" },
 ];
 
 export const productNavLinks: NavLink[] = [
-  { label: "Deionized Water", href: "/products/deionized-water" },
+  { label: "Deionised Water", href: "/products/deionized-water" },
 ];
 
 export const footerLinkGroups: FooterLinkGroup[] = [
@@ -26,7 +26,7 @@ export const footerLinkGroups: FooterLinkGroup[] = [
     title: "Products",
     links: [
       {
-        label: "5L Deionized Water",
+        label: "5L Deionised Water",
         href: "/products/deionized-water",
       },
       { label: "Specifications", href: "/#specifications" },

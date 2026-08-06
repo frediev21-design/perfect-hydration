@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 
+import { assetPaths } from "@/lib/config/hero";
 import { siteConfig } from "@/lib/config/site";
 
-const defaultOgImage = "/images/og-default.jpg";
+const defaultOgImage = assetPaths.social.ogImage;
 
 /**
  * Builds consistent metadata for Perfect Hydration pages.
@@ -41,7 +42,7 @@ export function createMetadata({
       siteName: siteConfig.name,
       title: pageTitle,
       description: pageDescription,
-      images: [{ url: image, width: 1200, height: 630, alt: pageTitle }],
+      images: [{ url: image, width: 1254, height: 1254, alt: pageTitle }],
     },
     twitter: {
       card: "summary_large_image",
@@ -56,6 +57,6 @@ export function createMetadata({
 }
 
 export const rootMetadata = createMetadata({
-  title: "Ultra Pure Deionized Water | Gauteng Delivery",
+  title: "Ultra Pure Deionised Water | Gauteng Delivery",
   description: siteConfig.description,
 });

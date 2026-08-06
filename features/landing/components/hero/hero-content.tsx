@@ -5,7 +5,7 @@ import { motion, useReducedMotion, type Variants } from "framer-motion";
 import { GlassCard } from "@/components/shared/glass-card";
 import { CallButton } from "@/features/orders/components/call-button";
 import { WhatsAppOrderButton } from "@/features/orders/components/whatsapp-order-button";
-import { heroUseCases } from "@/lib/config/hero";
+import { heroUseCases, heroTrustChips } from "@/lib/config/hero";
 import { formatPriceCompact } from "@/lib/utils/format";
 import type { Product } from "@/types/product";
 
@@ -56,7 +56,7 @@ export function HeroContent({ product, whatsappUrl }: HeroContentProps) {
       >
         Ultra Pure
         <br />
-        <span className="text-gradient-accent">Deionized Water</span>
+        <span className="text-gradient-accent">Deionised Water</span>
       </motion.h1>
 
       <motion.div
@@ -99,6 +99,21 @@ export function HeroContent({ product, whatsappUrl }: HeroContentProps) {
         <WhatsAppOrderButton href={whatsappUrl} />
         <CallButton />
       </motion.div>
+
+      <motion.ul
+        variants={shouldReduceMotion ? undefined : itemVariants}
+        className="mt-6 flex flex-wrap gap-2.5"
+        aria-label="Product quality indicators"
+      >
+        {heroTrustChips.map((chip) => (
+          <li
+            key={chip}
+            className="rounded-full border border-brand-accent/25 bg-brand-accent/10 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-brand-accent"
+          >
+            {chip}
+          </li>
+        ))}
+      </motion.ul>
     </motion.div>
   );
 }

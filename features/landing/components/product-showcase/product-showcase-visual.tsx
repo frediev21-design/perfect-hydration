@@ -82,8 +82,9 @@ export function ProductShowcaseVisual() {
         <Image
           src={assetPaths.product.bottle5L}
           alt={assetPaths.product.bottle5LAlt}
-          width={1254}
-          height={1254}
+          width={681}
+          height={1024}
+          loading="lazy"
           className="relative z-10 h-auto w-full object-contain drop-shadow-[0_40px_80px_rgba(0,174,239,0.28)]"
           sizes="(max-width: 1024px) 90vw, 480px"
         />

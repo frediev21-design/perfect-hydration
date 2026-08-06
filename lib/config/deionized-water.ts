@@ -15,13 +15,13 @@ import type { DeionizedWaterUseCase } from "@/types/landing";
 
 export const deionizedWaterSection = {
   eyebrow: "Product Education",
-  title: "What is Deionized Water?",
+  title: "What is Deionised Water?",
   intro: [
-    "Perfect Hydration Ultra-Pure Deionized Water is manufactured using a multi-stage purification process that combines Reverse Osmosis (RO) and Deionization (DI) to remove virtually all dissolved minerals, salts, and ionic contaminants. The result is exceptionally pure water with ultra-low conductivity and Total Dissolved Solids (TDS), helping to prevent scale, corrosion, and contamination in sensitive equipment.",
+    "Perfect Hydration Ultra-Pure Deionised Water is manufactured using a multi-stage purification process that combines Reverse Osmosis (RO) and Deionization (DI) to remove virtually all dissolved minerals, salts, and ionic contaminants. The result is exceptionally pure water with ultra-low conductivity and Total Dissolved Solids (TDS), helping to prevent scale, corrosion, and contamination in sensitive equipment.",
     "Every batch undergoes rigorous quality control, with our internal testing consistently recording 0 ppm Total Dissolved Solids (TDS) and 0 µS/cm conductivity under controlled testing conditions, while our certified product specification is ≤ 1 mg/L TDS and ≤ 1 µS/cm conductivity @ 25°C.",
   ],
   usesHeading:
-    "Perfect Hydration Deionized Water is trusted for applications where uncompromising water quality is essential, including:",
+    "Perfect Hydration Deionised Water is trusted for applications where uncompromising water quality is essential, including:",
   taglinePrimary: "Engineered Purity. Trusted Quality.",
   taglineSecondary: "Because Performance Demands Purity.",
 } as const;

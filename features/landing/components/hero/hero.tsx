@@ -13,7 +13,7 @@ export function Hero({ product, whatsappUrl }: HeroProps) {
   return (
     <section
       id="hero"
-      aria-label="Ultra Pure Deionized Water"
+      aria-label="Ultra Pure Deionised Water"
       className="relative min-h-[calc(100svh-4.5rem)] overflow-hidden"
     >
       <HeroBackground />

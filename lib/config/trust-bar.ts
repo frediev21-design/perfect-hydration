@@ -10,7 +10,7 @@ import type { TrustIndustry } from "@/types/landing";
 
 export const trustBarConfig = {
   rating: 5,
-  headline: "Trusted Across Gauteng",
+  headline: "Serving Gauteng Industry",
   subheadline: "Serving workshops, fleets, labs, and industry",
 } as const;
 

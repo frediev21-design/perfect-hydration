@@ -2,7 +2,7 @@ import type { Testimonial } from "@/types/content";
 
 export const testimonialsSection = {
   eyebrow: "Testimonials",
-  title: "Trusted Across Gauteng",
+  title: "What Our Customers Say",
   description:
     "Workshops, fleets, laboratories, and businesses rely on Perfect Hydration for consistent ultra pure water.",
 } as const;

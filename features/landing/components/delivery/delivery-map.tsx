@@ -97,6 +97,7 @@ export function DeliveryMap() {
               onBlur={() => setActiveAreaId(null)}
               onKeyDown={(event) => {
                 if (event.key === "Enter" || event.key === " ") {
+                  event.preventDefault();
                   setActiveAreaId(area.id);
                 }
               }}

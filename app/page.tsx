@@ -27,7 +27,7 @@ export default async function HomePage() {
       <Applications />
       <ProductShowcase />
       <Specifications product={product} />
-      <PricingSection unitPrice={product.price} />
+      <PricingSection />
       <Comparison />
       <Testimonials />
       <Faq />

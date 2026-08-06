@@ -1,6 +1,6 @@
 export const productShowcaseSection = {
   eyebrow: "Product Showcase",
-  title: "5L Automotive Grade Deionized Water",
+  title: "5L Automotive Grade Deionised Water",
   description:
     "Ultra pure. Professionally bottled. Engineered for workshops, fleets, laboratories, and industrial applications across Gauteng.",
   highlights: [

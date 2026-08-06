@@ -4,11 +4,7 @@ import { PricingTiers } from "@/features/landing/components/pricing/pricing-tier
 import { pricingSection } from "@/lib/config/pricing";
 import { siteConfig } from "@/lib/config/site";
 
-interface PricingSectionProps {
-  unitPrice: number;
-}
-
-export function PricingSection({ unitPrice }: PricingSectionProps) {
+export function PricingSection() {
   const { vatRate, deliveryFee, freeDeliveryThreshold } = siteConfig.commerce;
 
   return (
@@ -28,7 +24,6 @@ export function PricingSection({ unitPrice }: PricingSectionProps) {
       </div>
 
       <BulkCalculator
-        unitPrice={unitPrice}
         vatRate={vatRate}
         deliveryFee={deliveryFee}
         freeDeliveryThreshold={freeDeliveryThreshold}

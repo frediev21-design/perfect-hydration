@@ -6,7 +6,7 @@ import { deionizedWaterSection } from "@/lib/config/deionized-water";
 
 export function DeionizedWater() {
   return (
-    <Section id="what-is-deionized-water" ariaLabel="What is deionized water">
+    <Section id="what-is-deionized-water" ariaLabel="What is deionised water">
       <SectionHeading
         eyebrow={deionizedWaterSection.eyebrow}
         title={deionizedWaterSection.title}

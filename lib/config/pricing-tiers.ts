@@ -32,7 +32,7 @@ export const pricingTiers: PricingTier[] = [
     price: "R69",
     priceSuffix: "per 5L bottle",
     features: [
-      "5L Deionized Water",
+      "5L Deionised Water",
       "Automotive Grade",
       "Delivery across Gauteng",
     ],

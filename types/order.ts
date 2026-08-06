@@ -1,6 +1,8 @@
 export interface OrderCalculationInput {
   quantity: number;
   unitPrice: number;
+  bulkUnitPrice: number;
+  bulkThreshold: number;
   vatRate: number;
   deliveryFee: number;
   freeDeliveryThreshold: number;

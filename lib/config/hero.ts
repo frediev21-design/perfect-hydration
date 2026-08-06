@@ -1,8 +1,11 @@
 export const assetPaths = {
   product: {
-    bottle5L: "/images/PerfectHydration_FB_IG_Square.png",
+    bottle5L: "/images/hero-bottle.png",
     bottle5LAlt:
-      "Perfect Hydration ultra pure deionized water — 5 litre bottle, R69, Gauteng delivery",
+      "5 litre Perfect Hydration automotive grade deionised water bottle",
+  },
+  social: {
+    ogImage: "/images/PerfectHydration_FB_IG_Square.png",
   },
   brand: {
     logo: "/images/perfect-hydration-logo.png",
@@ -17,4 +20,10 @@ export const heroUseCases = [
   "Coolant Mixing",
   "Laboratories",
   "Manufacturing",
+] as const;
+
+export const heroTrustChips = [
+  "≤1 µS/cm",
+  "RO + DI",
+  "Pretoria, SA",
 ] as const;
