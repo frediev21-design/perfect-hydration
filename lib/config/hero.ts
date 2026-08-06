@@ -34,6 +34,6 @@ export const heroUseCases = [
 
 export const heroTrustChips = [
   "≤1 µS/cm",
-  "RO + DI",
+  "Pre-filtration · RO · DI",
   "Pretoria, SA",
 ] as const;

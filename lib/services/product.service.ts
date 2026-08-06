@@ -32,7 +32,7 @@ const deionizedWater5L: Product = {
   ],
   specifications: [
     { label: "Volume", value: "5 Litres" },
-    { label: "Treatment", value: "RO + DI" },
+    { label: "Treatment", value: "Pre-filtration + RO + DI" },
     { label: "Conductivity", value: "≤1 µS/cm" },
     { label: "TDS", value: "≤1 mg/L" },
     { label: "pH", value: "5–6.7" },

@@ -28,7 +28,7 @@ export const whyUsFeatures: WhyUsFeature[] = [
     id: "reverse-osmosis",
     title: "Reverse Osmosis",
     description:
-      "RO filtration strips dissolved solids before final polishing — the foundation of consistent batch quality.",
+      "Pre-filtration protects the RO membrane before dissolved solids are stripped — the foundation of consistent batch quality.",
     icon: Filter,
   },
   {

@@ -12,7 +12,7 @@ export const faqItems: FaqItem[] = [
     id: "what-is-deionized-water",
     question: "What is deionised water?",
     answer:
-      "Perfect Hydration Ultra-Pure Deionised Water is produced using Reverse Osmosis (RO) and Deionization (DI) to remove dissolved minerals, salts, and ionic contaminants — resulting in ultra-low conductivity and TDS. See our What is Deionised Water section for full details, quality targets, and applications.",
+      "Perfect Hydration Ultra-Pure Deionised Water is produced using pre-filtration, Reverse Osmosis (RO), and Deionization (DI) to remove dissolved minerals, salts, and ionic contaminants — resulting in ultra-low conductivity and TDS. See our What is Deionised Water section for full details, quality targets, and applications.",
   },
   {
     id: "automotive-use",

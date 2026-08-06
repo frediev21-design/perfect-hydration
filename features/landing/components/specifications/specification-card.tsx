@@ -26,12 +26,12 @@ export function SpecificationCard({
             {volumeLitres} Litres
           </p>
           <p className="mt-4 max-w-md text-base leading-relaxed text-muted-foreground">
-            Multi-stage reverse osmosis and deionization for ultra-low
-            conductivity water suitable for critical applications.
+            Multi-stage pre-filtration, reverse osmosis, and deionization for
+            ultra-low conductivity water suitable for critical applications.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-2">
-            {["RO", "DI", "Automotive Grade"].map((badge) => (
+            {["Pre-filtration", "RO", "DI", "Automotive Grade"].map((badge) => (
               <span
                 key={badge}
                 className="rounded-full border border-brand-accent/25 bg-brand-accent/10 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand-accent"

@@ -5,7 +5,7 @@ export const productShowcaseSection = {
     "Ultra pure. Professionally bottled. Engineered for workshops, fleets, laboratories, and industrial applications across Gauteng.",
   highlights: [
     "5 Litre bottle",
-    "RO + DI treated",
+    "Pre-filtration · RO · DI treated",
     "≤1 µS/cm conductivity",
     "Fast Gauteng delivery",
   ],
