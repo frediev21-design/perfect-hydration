@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 
+import { assetPaths } from "@/lib/config/hero";
 import { siteConfig } from "@/lib/config/site";
 import { cn } from "@/lib/utils";
 
@@ -9,29 +11,25 @@ interface LogoProps {
 }
 
 export function Logo({ className, showTagline = true }: LogoProps) {
+  const src = showTagline ? assetPaths.brand.logo : assetPaths.brand.logoCompact;
+
   return (
     <Link
       href="/"
-      className={cn("group flex items-center gap-3", className)}
+      className={cn("group inline-flex shrink-0 items-center", className)}
       aria-label={`${siteConfig.name} — Home`}
     >
-      <span
-        aria-hidden
-        className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-brand-accent/20 bg-brand-accent/10 font-heading text-sm font-extrabold tracking-tight text-brand-accent transition-colors group-hover:border-brand-accent/40 group-hover:bg-brand-accent/15"
-      >
-        PH+
-      </span>
-
-      <span className="min-w-0">
-        <span className="block font-heading text-sm font-extrabold uppercase tracking-[0.18em] text-white">
-          Perfect Hydration
-        </span>
-        {showTagline ? (
-          <span className="block truncate text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
-            {siteConfig.tagline}
-          </span>
-        ) : null}
-      </span>
+      <Image
+        src={src}
+        alt={assetPaths.brand.logoAlt}
+        width={showTagline ? 275 : 275}
+        height={showTagline ? 258 : 215}
+        priority
+        className={cn(
+          "h-auto w-auto max-w-none object-contain transition-opacity group-hover:opacity-90",
+          showTagline ? "h-[4.5rem] sm:h-[5rem]" : "h-9 sm:h-10",
+        )}
+      />
     </Link>
   );
 }
