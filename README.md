@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Perfect Hydration Sales Platform
+
+Premium conversion-focused landing page for **Perfect Hydration** — built to turn Facebook traffic into WhatsApp orders and scale into a full digital commerce platform.
+
+## Tech Stack
+
+- **Next.js 15** (App Router)
+- **React 19**
+- **TypeScript** (strict)
+- **Tailwind CSS 4**
+- **Shadcn/UI**
+- **Framer Motion**
+- **TanStack Query**
+- **Zod** + **React Hook Form**
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 20+
+- npm 10+
+
+### Installation
 
 ```bash
+npm install
+cp .env.example .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command         | Description              |
+| --------------- | ------------------------ |
+| `npm run dev`   | Start development server |
+| `npm run build` | Production build         |
+| `npm run start` | Start production server  |
+| `npm run lint`  | Run ESLint               |
+| `npm run format`| Format with Prettier     |
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/                    # Routes (thin composition layer)
+components/
+  providers/            # Client providers (React Query, etc.)
+  shared/               # Reusable layout primitives
+  ui/                   # Shadcn UI primitives
+features/               # Feature modules (landing, orders, conversion)
+hooks/                  # Shared React hooks
+lib/
+  config/               # Env + site configuration (Zod validated)
+  seo/                  # Metadata helpers
+  services/             # Data access layer (Supabase-ready)
+  utils/                # Pure utilities
+types/                  # Shared TypeScript types
+public/images/          # Optimised static assets
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Architecture Principles
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Server Components by default** — client islands only for interactivity
+- **Feature-based modules** — scalable for future SaaS expansion
+- **Service layer abstraction** — static data today, Supabase/PostgreSQL tomorrow
+- **Environment-driven config** — all business values via `.env.local`
 
-## Deploy on Vercel
+## Environment Variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Copy `.env.example` to `.env.local` and adjust as needed. All public variables are prefixed with `NEXT_PUBLIC_`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+Deploy to [Vercel](https://vercel.com) or any Node.js host:
+
+```bash
+npm run build
+npm run start
+```
+
+Set environment variables in your hosting dashboard before deploying.
+
+## Current Sprint Status
+
+**Sprint 0 — Foundation** ✅
+
+- Project scaffold
+- Design tokens & typography
+- Config + service layer
+- SEO shell (metadata, robots, sitemap)
+- Shared UI primitives
+
+**Sprint 1 — Navigation & Footer** ✅
+
+- Sticky glass navigation with mobile menu
+- Premium footer with company, products, contact
+- Skip-to-content accessibility link
+- Reusable WhatsApp & Call CTA buttons
+- App shell wrapping all routes
+
+**Sprint 2 — Animated Hero** ✅
+
+- 100vh split layout with product copy and bottle visual
+- Floating bottle with glow, reflection, and mouse parallax
+- Ambient particles, water ripples, and staggered fade-in
+- `id="hero"` section anchor
+- Uses product image at `public/images/bottle-5l-deionized-water.jpeg`
+
+**Next:** Sprint 3 — Trust bar + Why Perfect Hydration feature cards
+
+## License
+
+Proprietary — Perfect Hydration © 2026
