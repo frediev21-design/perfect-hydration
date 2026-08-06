@@ -76,18 +76,17 @@ export function HeroVisual() {
             ease: "easeInOut",
           }}
         >
-          <div className="relative overflow-hidden rounded-[2rem]">
-            <div className="absolute inset-0 bg-gradient-to-tr from-brand-accent/10 via-transparent to-white/10" />
+          <div className="relative">
             <Image
               src={assetPaths.product.bottle5L}
               alt={assetPaths.product.bottle5LAlt}
               width={640}
               height={800}
               priority
-              className="h-auto w-full object-contain drop-shadow-[0_30px_60px_rgba(0,174,239,0.25)]"
+              className="h-auto w-full object-contain drop-shadow-[0_30px_60px_rgba(0,174,239,0.35)]"
               sizes="(max-width: 1024px) 80vw, 40vw"
             />
-            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.12)_0%,transparent_22%,transparent_78%,rgba(2,8,23,0.15)_100%)]" />
+            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.08)_0%,transparent_24%,transparent_76%,rgba(2,8,23,0.2)_100%)]" />
           </div>
         </motion.div>
 

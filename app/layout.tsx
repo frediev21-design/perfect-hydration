@@ -10,13 +10,13 @@ import "./globals.css";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["600", "700", "800"],
-  variable: "--font-heading",
+  variable: "--font-poppins",
   display: "swap",
 });
 
 const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-inter",
   display: "swap",
 });
 
@@ -28,10 +28,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-ZA" className="dark scroll-smooth">
-      <body
-        className={`${poppins.variable} ${inter.variable} min-h-screen bg-background font-sans text-foreground antialiased`}
-      >
+    <html
+      lang="en-ZA"
+      className={`dark scroll-smooth ${poppins.variable} ${inter.variable}`}
+    >
+      <body className="min-h-screen bg-background font-sans text-foreground antialiased">
         <QueryProvider>
           <AppShell>{children}</AppShell>
         </QueryProvider>
