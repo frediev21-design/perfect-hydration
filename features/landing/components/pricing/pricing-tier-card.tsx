@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { Building2, Check, Droplets, MessageCircle } from "lucide-react";
+import { Building2, Check, MessageCircle } from "lucide-react";
 
 import { GlassCard } from "@/components/shared/glass-card";
 import { Button } from "@/components/ui/button";
@@ -28,7 +28,7 @@ function getTierIcon(tier: PricingTier) {
     return Building2;
   }
 
-  return Droplets;
+  return null;
 }
 
 interface PricingTierCardProps {
@@ -62,7 +62,7 @@ export function PricingTierCard({ tier, index }: PricingTierCardProps) {
       >
         {tier.badge ? (
           <span className="absolute right-5 top-5 rounded-full border border-brand-accent/30 bg-brand-accent/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-accent">
-            {tier.badge}
+            {tier.badge.toUpperCase()}
           </span>
         ) : null}
 
@@ -75,7 +75,17 @@ export function PricingTierCard({ tier, index }: PricingTierCardProps) {
                 tier.highlighted ? "text-brand-accent" : "text-brand-accent/80",
               )}
             />
-          ) : null}
+          ) : (
+            <span
+              aria-hidden
+              className={cn(
+                "text-sm leading-none",
+                tier.highlighted ? "text-brand-accent" : "text-brand-accent/80",
+              )}
+            >
+              •
+            </span>
+          )}
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-accent">
             {tier.label}
           </p>

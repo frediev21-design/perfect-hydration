@@ -8,7 +8,10 @@ export function PricingTiers() {
   return (
     <div>
       <div className="mx-auto max-w-3xl text-center">
-        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-brand-accent">
+        <p className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.28em] text-brand-accent">
+          <span aria-hidden className="mr-2 text-brand-accent/70">
+            •
+          </span>
           {bulkPricingSection.eyebrow}
         </p>
         <h2 className="mt-4 font-heading text-4xl tracking-tight text-white sm:text-5xl lg:text-6xl">

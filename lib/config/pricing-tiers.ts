@@ -19,8 +19,8 @@ export interface PricingTier {
 
 export const bulkPricingSection = {
   eyebrow: "Bulk Pricing",
-  titleLead: "The More You Order, The Better",
-  titleAccent: "The Value",
+  titleLead: "The More You Order,",
+  titleAccent: "The Better The Value",
   description:
     "Transparent pricing for individuals, workshops and industrial accounts.",
 } as const;
