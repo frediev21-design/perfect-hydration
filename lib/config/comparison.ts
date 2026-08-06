@@ -1,59 +1,43 @@
 import type { ComparisonFeature } from "@/types/content";
 
 export const comparisonSection = {
-  eyebrow: "Comparison",
-  title: "Why Not Tap Water?",
+  titleLead: "The Purity",
+  titleAccent: "Difference",
   description:
-    "Tap water contains minerals and impurities that can damage batteries, cooling systems, and sensitive equipment. Perfect Hydration is engineered for purity you can measure.",
+    "Tap water leaves minerals, scale and corrosion behind. Perfect Hydration is processed to laboratory-grade purity.",
+  tapWaterLabel: "Tap Water",
+  perfectHydrationLabel: "Perfect Hydration",
 } as const;
 
 export const comparisonFeatures: ComparisonFeature[] = [
   {
     id: "minerals",
-    label: "Minerals & ions removed",
-    tapWater: false,
-    perfectHydration: true,
-  },
-  {
-    id: "conductivity",
-    label: "Low conductivity (≤1 µS/cm)",
-    tapWater: false,
-    perfectHydration: true,
-  },
-  {
-    id: "automotive",
-    label: "Automotive grade purity",
-    tapWater: false,
-    perfectHydration: true,
-  },
-  {
-    id: "consistent",
-    label: "Consistent batch quality",
-    tapWater: false,
-    perfectHydration: true,
-  },
-  {
-    id: "battery",
-    label: "Safe for battery top-up",
-    tapWater: false,
-    perfectHydration: true,
+    label: "Minerals",
+    tapWater: "Present",
+    perfectHydration: "Ultra Pure",
   },
   {
     id: "scale",
-    label: "Reduces scale & corrosion risk",
-    tapWater: false,
-    perfectHydration: true,
+    label: "Scale",
+    tapWater: "Builds Scale",
+    perfectHydration: "No Scale",
   },
   {
-    id: "lab",
-    label: "Suitable for laboratory use",
-    tapWater: false,
-    perfectHydration: true,
+    id: "conductivity",
+    label: "Conductivity",
+    tapWater: "Conductive",
+    perfectHydration: "Low Conductivity",
   },
   {
-    id: "delivery",
-    label: "Fast Gauteng delivery",
-    tapWater: "Varies",
-    perfectHydration: true,
+    id: "corrosion",
+    label: "Corrosion",
+    tapWater: "Causes Rust",
+    perfectHydration: "Prevents Corrosion",
+  },
+  {
+    id: "impurities",
+    label: "Impurities",
+    tapWater: "Trace Impurities",
+    perfectHydration: "Laboratory Grade",
   },
 ];

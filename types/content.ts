@@ -1,8 +1,8 @@
 export interface ComparisonFeature {
   id: string;
   label: string;
-  tapWater: string | false;
-  perfectHydration: string | true;
+  tapWater: string;
+  perfectHydration: string;
 }
 
 export interface Testimonial {
