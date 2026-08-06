@@ -20,3 +20,11 @@ export interface ProductApplication {
   description: string;
   icon: LucideIcon;
 }
+
+export interface DeionizedWaterUseCase {
+  id: string;
+  title: string;
+  description?: string;
+  icon: LucideIcon;
+  featured?: boolean;
+}

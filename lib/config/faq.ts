@@ -12,7 +12,7 @@ export const faqItems: FaqItem[] = [
     id: "what-is-deionized-water",
     question: "What is deionized water?",
     answer:
-      "Deionized water is water that has had nearly all of its mineral ions removed through processes like reverse osmosis and deionization. The result is ultra pure water with very low conductivity, ideal for automotive, laboratory, and industrial applications.",
+      "Perfect Hydration Ultra-Pure Deionized Water is produced using Reverse Osmosis (RO) and Deionization (DI) to remove dissolved minerals, salts, and ionic contaminants — resulting in ultra-low conductivity and TDS. See our What is Deionized Water section for full details, quality targets, and applications.",
   },
   {
     id: "automotive-use",

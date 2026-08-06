@@ -77,7 +77,7 @@ export function HeroVisual() {
           }}
         >
           <Image
-            src={assetPaths.product.heroBottle}
+            src={assetPaths.product.bottle5L}
             alt={assetPaths.product.bottle5LAlt}
             width={1024}
             height={1536}

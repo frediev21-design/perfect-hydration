@@ -79,36 +79,19 @@ export function ProductShowcaseVisual() {
               }
         }
       >
-        <div className="relative">
-          <Image
-            src={assetPaths.product.bottle5L}
-            alt={assetPaths.product.bottle5LAlt}
-            width={720}
-            height={900}
-            className="relative z-10 h-auto w-full object-contain drop-shadow-[0_40px_80px_rgba(0,174,239,0.35)]"
-            sizes="(max-width: 1024px) 90vw, 480px"
-          />
-        </div>
-
-        <div
-          aria-hidden
-          className="absolute -bottom-3 left-1/2 z-0 h-20 w-[70%] -translate-x-1/2 rounded-[100%] bg-brand-accent/25 blur-2xl"
+        <Image
+          src={assetPaths.product.bottle5L}
+          alt={assetPaths.product.bottle5LAlt}
+          width={1024}
+          height={1536}
+          className="relative z-10 h-auto w-full object-contain drop-shadow-[0_40px_80px_rgba(0,174,239,0.28)]"
+          sizes="(max-width: 1024px) 90vw, 480px"
         />
 
         <div
           aria-hidden
-          className="absolute bottom-0 left-1/2 z-0 w-[55%] -translate-x-1/2 overflow-hidden opacity-30"
-          style={{ transform: "translateX(-50%) scaleY(-1)" }}
-        >
-          <Image
-            src={assetPaths.product.bottle5L}
-            alt=""
-            width={720}
-            height={900}
-            className="h-28 w-full object-cover object-top [mask-image:linear-gradient(to_bottom,transparent,black_35%,transparent)]"
-            sizes="280px"
-          />
-        </div>
+          className="absolute -bottom-3 left-1/2 z-0 h-20 w-[70%] -translate-x-1/2 rounded-[100%] bg-brand-accent/15 blur-2xl"
+        />
       </motion.div>
     </div>
   );

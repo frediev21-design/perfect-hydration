@@ -1,5 +1,6 @@
 import { Applications } from "@/features/landing/components/applications/applications";
 import { Comparison } from "@/features/landing/components/comparison/comparison";
+import { DeionizedWater } from "@/features/landing/components/deionized-water/deionized-water";
 import { Delivery } from "@/features/landing/components/delivery/delivery";
 import { Faq } from "@/features/landing/components/faq/faq";
 import { FinalCta } from "@/features/landing/components/final-cta/final-cta";
@@ -21,6 +22,7 @@ export default async function HomePage() {
     <main id="main-content" className="relative flex-1" tabIndex={-1}>
       <Hero product={product} whatsappUrl={whatsappUrl} />
       <TrustBar />
+      <DeionizedWater />
       <WhyUs />
       <Applications />
       <ProductShowcase />
