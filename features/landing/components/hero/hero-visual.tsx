@@ -47,7 +47,7 @@ export function HeroVisual() {
       </motion.div>
 
       <motion.div
-        className="relative aspect-[4/5] w-full max-w-md"
+        className="relative aspect-[2/3] w-full max-w-md"
         initial={shouldReduceMotion ? false : { opacity: 0, y: 32, scale: 0.96 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
@@ -76,39 +76,21 @@ export function HeroVisual() {
             ease: "easeInOut",
           }}
         >
-          <div className="relative">
-            <Image
-              src={assetPaths.product.bottle5L}
-              alt={assetPaths.product.bottle5LAlt}
-              width={640}
-              height={800}
-              priority
-              className="h-auto w-full object-contain drop-shadow-[0_30px_60px_rgba(0,174,239,0.35)]"
-              sizes="(max-width: 1024px) 80vw, 40vw"
-            />
-            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.08)_0%,transparent_24%,transparent_76%,rgba(2,8,23,0.2)_100%)]" />
-          </div>
+          <Image
+            src={assetPaths.product.heroBottle}
+            alt={assetPaths.product.bottle5LAlt}
+            width={1024}
+            height={1536}
+            priority
+            className="h-auto w-full object-contain drop-shadow-[0_30px_60px_rgba(0,174,239,0.28)]"
+            sizes="(max-width: 1024px) 80vw, 40vw"
+          />
         </motion.div>
 
         <div
           aria-hidden
-          className="absolute -bottom-2 left-1/2 z-0 h-16 w-[72%] -translate-x-1/2 rounded-[100%] bg-brand-accent/20 blur-2xl"
+          className="absolute -bottom-2 left-1/2 z-0 h-16 w-[72%] -translate-x-1/2 rounded-[100%] bg-brand-accent/15 blur-2xl"
         />
-
-        <div
-          aria-hidden
-          className="absolute bottom-0 left-1/2 z-0 w-[58%] -translate-x-1/2 overflow-hidden opacity-35"
-          style={{ transform: "translateX(-50%) scaleY(-1)" }}
-        >
-          <Image
-            src={assetPaths.product.bottle5L}
-            alt=""
-            width={640}
-            height={800}
-            className="h-24 w-full object-cover object-top [mask-image:linear-gradient(to_bottom,transparent,black_40%,transparent)]"
-            sizes="240px"
-          />
-        </div>
       </motion.div>
     </div>
   );

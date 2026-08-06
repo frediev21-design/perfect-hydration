@@ -1,7 +1,9 @@
 export const assetPaths = {
   product: {
     bottle5L: "/images/deionised-water.jpeg",
-    bottle5LAlt: "5 litre bottle of Perfect Hydration ultra pure deionized water",
+    heroBottle: "/images/hero-bottle.png",
+    bottle5LAlt:
+      "5 litre Perfect Hydration automotive grade deionized water bottle",
   },
   brand: {
     logo: "/images/perfect-hydration-logo.png",
