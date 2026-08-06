@@ -1,4 +1,9 @@
 export const assetPaths = {
+  hero: {
+    visual: "/images/hero-cinematic.png",
+    visualAlt:
+      "Perfect Hydration 5 litre ultra pure deionised water with water splash effects",
+  },
   product: {
     bottle5L: "/images/hero-bottle.png",
     bottle5LAlt:
