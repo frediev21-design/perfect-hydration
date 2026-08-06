@@ -126,7 +126,13 @@ Set environment variables in your hosting dashboard before deploying.
 - Bulk calculator with VAT, delivery, and free delivery at 6+ bottles
 - WhatsApp CTA passes selected quantity
 
-**Next:** Sprint 6 — Comparison table, Testimonials carousel, and FAQ accordion
+**Sprint 6 — Comparison, Testimonials & FAQ** ✅
+
+- Tap Water vs Perfect Hydration comparison table with animated icons
+- Auto-scrolling testimonial carousel with glass cards (`id="testimonials"`)
+- Animated FAQ accordion with JSON-LD schema (`id="faq"`)
+
+**Next:** Sprint 7 — Gauteng delivery map, final CTA, and conversion layer
 
 ## License
 
