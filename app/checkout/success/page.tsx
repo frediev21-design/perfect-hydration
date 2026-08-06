@@ -8,7 +8,7 @@ export const metadata = createMetadata({
 });
 
 interface CheckoutSuccessPageProps {
-  searchParams: Promise<{ provider?: string; token?: string }>;
+  searchParams: Promise<{ provider?: string; token?: string; order?: string }>;
 }
 
 export default async function CheckoutSuccessPage({
@@ -17,6 +17,10 @@ export default async function CheckoutSuccessPage({
   const params = await searchParams;
 
   return (
-    <CheckoutSuccessClient provider={params.provider} token={params.token} />
+    <CheckoutSuccessClient
+      provider={params.provider}
+      token={params.token}
+      orderId={params.order}
+    />
   );
 }

@@ -7,6 +7,9 @@ export const checkoutSection = {
   whatsappFallback: "Prefer WhatsApp? Order manually instead.",
   payNowLabel: "Pay Securely",
   processingLabel: "Redirecting to payment…",
+  orderNumberLabel: "Order Number",
+  orderNumberHint: "Save this number to track your order or quote it on WhatsApp.",
+  redirectingWithOrder: "Your order number has been created. Redirecting to secure payment…",
   summaryTitle: "Order Summary",
   productLabel: "5L Deionised Water",
   paymentMethodsTitle: "Payment method",
@@ -22,7 +25,8 @@ export const checkoutSuccessCopy = {
   title: "Payment Received",
   description:
     "Thank you — your order is confirmed. We will contact you shortly to arrange Gauteng delivery.",
-  referenceLabel: "Order reference",
+  referenceLabel: "Order Number",
+  trackHint: "Use this number when contacting us about delivery.",
   whatsappHint: "Need to add delivery details? Message us on WhatsApp.",
 } as const;
 

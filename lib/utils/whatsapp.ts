@@ -3,12 +3,15 @@ import { env } from "@/lib/config/env";
 export interface WhatsAppOrderOptions {
   quantity?: number;
   deliveryAddress?: string;
+  orderNumber?: string;
   quote?: boolean;
 }
 
 const DEFAULT_ORDER_MESSAGE = `Hi Perfect Hydration,
 
 I would like to order the 5L Automotive Grade Deionised Water.
+
+Order Number:
 
 Quantity:
 
@@ -38,9 +41,15 @@ Delivery address:`;
 export function buildWhatsAppOrderUrl(
   options: WhatsAppOrderOptions = {},
 ): string {
-  const { quantity, deliveryAddress, quote = false } = options;
+  const { quantity, deliveryAddress, orderNumber, quote = false } = options;
 
   let message = quote ? DEFAULT_QUOTE_MESSAGE : DEFAULT_ORDER_MESSAGE;
+
+  if (orderNumber) {
+    message = message.replace("Order Number:", `Order Number: ${orderNumber}`);
+  } else {
+    message = message.replace("Order Number:\n\n", "");
+  }
 
   if (quantity !== undefined) {
     message = message.replace(

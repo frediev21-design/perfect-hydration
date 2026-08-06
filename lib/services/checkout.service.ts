@@ -1,5 +1,4 @@
-import { randomUUID } from "node:crypto";
-
+import { generateOrderNumber } from "@/lib/utils/order-number";
 import { env } from "@/lib/config/env";
 import { calculateOrder } from "@/lib/services/order-calculator.service";
 import { saveOrder } from "@/lib/services/order-repository.service";
@@ -28,7 +27,7 @@ export async function createCheckoutOrder(
   });
 
   const order: CheckoutOrder = {
-    id: `PH-${randomUUID().slice(0, 8).toUpperCase()}`,
+    id: generateOrderNumber(),
     productId: product.id,
     productName: product.shortName,
     customer: {

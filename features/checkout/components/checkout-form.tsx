@@ -9,6 +9,7 @@ import { useForm } from "react-hook-form";
 
 import { GlassCard } from "@/components/shared/glass-card";
 import { Button } from "@/components/ui/button";
+import { OrderNumberBadge } from "@/features/checkout/components/order-number-badge";
 import { PayFastRedirectForm } from "@/features/checkout/components/payfast-redirect-form";
 import { PaymentMethodSelector } from "@/features/checkout/components/payment-method-selector";
 import { trackConversionEvent } from "@/lib/analytics/events";
@@ -44,6 +45,9 @@ export function CheckoutForm({
   });
   const [payfastRedirect, setPayfastRedirect] =
     useState<PayFastFormPayload | null>(null);
+  const [pendingOrderNumber, setPendingOrderNumber] = useState<string | null>(
+    null,
+  );
   const [submitError, setSubmitError] = useState<string | null>(null);
 
   const defaultProvider: PaymentProvider = "payfast";
@@ -124,10 +128,12 @@ export function CheckoutForm({
       }
 
       if (payload.provider === "payfast") {
+        setPendingOrderNumber(payload.order.id as string);
         setPayfastRedirect(payload.payment as PayFastFormPayload);
         return;
       }
 
+      sessionStorage.setItem("ph_checkout_order", payload.order.id as string);
       window.location.href = payload.payment.approvalUrl as string;
     } catch {
       setSubmitError("Unable to start checkout. Please try again.");
@@ -136,13 +142,20 @@ export function CheckoutForm({
 
   return (
     <>
-      {payfastRedirect ? (
-        <PayFastRedirectForm
-          actionUrl={payfastRedirect.actionUrl}
-          fields={payfastRedirect.fields}
-        />
+      {payfastRedirect && pendingOrderNumber ? (
+        <>
+          <OrderNumberBadge orderNumber={pendingOrderNumber} className="mb-4" />
+          <p className="mb-4 text-sm text-muted-foreground">
+            {checkoutSection.redirectingWithOrder}
+          </p>
+          <PayFastRedirectForm
+            actionUrl={payfastRedirect.actionUrl}
+            fields={payfastRedirect.fields}
+          />
+        </>
       ) : null}
 
+      {!payfastRedirect ? (
       <GlassCard className="p-6 sm:p-8">
         <form className="space-y-6" onSubmit={onSubmit}>
           <div className="grid gap-4 sm:grid-cols-2">
@@ -246,6 +259,7 @@ export function CheckoutForm({
           </div>
         </form>
       </GlassCard>
+      ) : null}
     </>
   );
 }

@@ -5,6 +5,7 @@ import {
   getOrder,
   updateOrderStatus,
 } from "@/lib/services/order-repository.service";
+import { toPublicOrderSummary } from "@/lib/services/order-query.service";
 
 export async function POST(request: Request) {
   try {
@@ -33,7 +34,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Order not found" }, { status: 404 });
     }
 
-    return NextResponse.json({ order });
+    return NextResponse.json({ order: toPublicOrderSummary(order) });
   } catch (error) {
     console.error("PayPal capture failed:", error);
     return NextResponse.json(
@@ -56,5 +57,5 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: "Order not found" }, { status: 404 });
   }
 
-  return NextResponse.json({ order });
+  return NextResponse.json({ order: toPublicOrderSummary(order) });
 }

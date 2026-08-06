@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { Container } from "@/components/shared/container";
 import { GlassCard } from "@/components/shared/glass-card";
+import { OrderNumberBadge } from "@/features/checkout/components/order-number-badge";
 import { WhatsAppOrderButton } from "@/features/orders/components/whatsapp-order-button";
 import { checkoutCancelCopy } from "@/lib/config/checkout";
 import { buildWhatsAppOrderUrl } from "@/lib/utils/whatsapp";
@@ -13,8 +14,17 @@ export const metadata = createMetadata({
   path: "/checkout/cancel",
 });
 
-export default function CheckoutCancelPage() {
-  const whatsappUrl = buildWhatsAppOrderUrl();
+interface CheckoutCancelPageProps {
+  searchParams: Promise<{ order?: string }>;
+}
+
+export default async function CheckoutCancelPage({
+  searchParams,
+}: CheckoutCancelPageProps) {
+  const params = await searchParams;
+  const whatsappUrl = buildWhatsAppOrderUrl({
+    orderNumber: params.order,
+  });
 
   return (
     <main id="main-content" className="min-h-screen flex-1 py-16 sm:py-20" tabIndex={-1}>
@@ -26,6 +36,14 @@ export default function CheckoutCancelPage() {
           <p className="mt-4 text-lg text-muted-foreground">
             {checkoutCancelCopy.description}
           </p>
+
+          {params.order ? (
+            <OrderNumberBadge
+              orderNumber={params.order}
+              className="mt-8 text-left"
+              hint="Your order was created but payment was not completed. Retry checkout with this number or contact us on WhatsApp."
+            />
+          ) : null}
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link

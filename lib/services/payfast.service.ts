@@ -43,8 +43,8 @@ export function buildPayFastCheckout(order: CheckoutOrder): PayFastFormPayload {
   const fields: Record<string, string> = {
     merchant_id: serverEnv.PAYFAST_MERCHANT_ID,
     merchant_key: serverEnv.PAYFAST_MERCHANT_KEY,
-    return_url: `${siteUrl}/checkout/success?provider=payfast`,
-    cancel_url: `${siteUrl}/checkout/cancel`,
+    return_url: `${siteUrl}/checkout/success?provider=payfast&order=${encodeURIComponent(order.id)}`,
+    cancel_url: `${siteUrl}/checkout/cancel?order=${encodeURIComponent(order.id)}`,
     notify_url: `${siteUrl}/api/webhooks/payfast`,
     name_first: order.customer.firstName,
     name_last: order.customer.lastName,
