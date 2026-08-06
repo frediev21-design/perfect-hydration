@@ -79,8 +79,8 @@ export function HeroVisual() {
           <Image
             src={assetPaths.product.bottle5L}
             alt={assetPaths.product.bottle5LAlt}
-            width={1024}
-            height={1536}
+            width={681}
+            height={1024}
             priority
             className="h-auto w-full object-contain drop-shadow-[0_30px_60px_rgba(0,174,239,0.28)]"
             sizes="(max-width: 1024px) 80vw, 40vw"
