@@ -54,7 +54,7 @@ export function FeatureCard({
             <Icon aria-hidden className="size-5" />
           </div>
 
-          <h3 className="font-heading text-xl font-extrabold text-white">
+          <h3 className="font-heading text-xl font-bold text-white">
             {title}
           </h3>
 

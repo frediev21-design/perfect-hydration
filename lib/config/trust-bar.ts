@@ -9,9 +9,8 @@ import {
 import type { TrustIndustry } from "@/types/landing";
 
 export const trustBarConfig = {
-  rating: 5,
-  headline: "Serving Gauteng Industry",
-  subheadline: "Serving workshops, fleets, labs, and industry",
+  headline: "Consistently Tested · Pretoria Bottling",
+  subheadline: "Same-week Gauteng delivery · Nationwide via Bobshop",
 } as const;
 
 export const trustIndustries: TrustIndustry[] = [

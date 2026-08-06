@@ -5,6 +5,7 @@ import { Building2, Check, MessageCircle } from "lucide-react";
 
 import { GlassCard } from "@/components/shared/glass-card";
 import { Button } from "@/components/ui/button";
+import { trackConversionEvent } from "@/lib/analytics/events";
 import type { PricingTier } from "@/lib/config/pricing-tiers";
 import {
   buildWhatsAppBusinessUrl,
@@ -92,7 +93,7 @@ export function PricingTierCard({ tier, index }: PricingTierCardProps) {
         </div>
 
         <div className="mt-6">
-          <p className="font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
+          <p className="font-heading text-4xl font-bold tracking-tight text-white sm:text-5xl">
             {tier.price}
           </p>
           <p className="mt-2 text-sm text-muted-foreground">{tier.priceSuffix}</p>
@@ -121,6 +122,12 @@ export function PricingTierCard({ tier, index }: PricingTierCardProps) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${tier.ctaLabel} via WhatsApp`}
+              onClick={() => {
+                trackConversionEvent("whatsapp_click", {
+                  source: `pricing_tier_${tier.id}`,
+                  quantity: tier.orderQuantity,
+                });
+              }}
             />
           }
           variant={tier.ctaVariant === "outline" ? "outline" : "default"}

@@ -1,4 +1,6 @@
 import { createMetadata } from "@/lib/seo/metadata";
+import { JsonLd } from "@/lib/seo/json-ld";
+import { buildProductSchema } from "@/lib/seo/product-schema";
 import { getProductBySlug } from "@/lib/services/product.service";
 import { notFound } from "next/navigation";
 
@@ -32,6 +34,7 @@ export default async function DeionizedWaterPage() {
 
   return (
     <main id="main-content" className="min-h-screen flex-1 py-24" tabIndex={-1}>
+      <JsonLd data={buildProductSchema(product)} />
       <Container>
         <p className="text-sm font-semibold uppercase tracking-[0.28em] text-brand-accent">
           {product.grade}

@@ -136,6 +136,12 @@
     background-attachment: fixed;
   }
 
+  @media (max-width: 1023px) {
+    body {
+      background-attachment: scroll;
+    }
+  }
+
   h1,
   h2,
   h3,
@@ -143,7 +149,7 @@
   h5,
   h6 {
     font-family: var(--font-heading), sans-serif;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: -0.02em;
   }
 }

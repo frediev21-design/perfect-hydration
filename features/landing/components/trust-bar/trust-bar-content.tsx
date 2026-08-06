@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { Star } from "lucide-react";
 
 import { Container } from "@/components/shared/container";
 import {
@@ -9,35 +8,6 @@ import {
   trustIndustries,
 } from "@/lib/config/trust-bar";
 import { cn } from "@/lib/utils";
-
-function StarRating({ count }: { count: number }) {
-  const shouldReduceMotion = useReducedMotion();
-
-  return (
-    <div
-      className="flex items-center gap-1"
-      aria-label={`${count} out of 5 stars`}
-    >
-      {Array.from({ length: count }, (_, index) => (
-        <motion.span
-          key={index}
-          initial={shouldReduceMotion ? false : { opacity: 0, scale: 0.6 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            delay: index * 0.08,
-            duration: 0.4,
-            ease: [0.22, 1, 0.36, 1],
-          }}
-        >
-          <Star
-            aria-hidden
-            className="size-4 fill-brand-accent text-brand-accent"
-          />
-        </motion.span>
-      ))}
-    </div>
-  );
-}
 
 function IndustryBadge({
   label,
@@ -79,8 +49,7 @@ export function TrustBarContent() {
             transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
             className="flex flex-col items-center gap-2 text-center lg:items-start lg:text-left"
           >
-            <StarRating count={trustBarConfig.rating} />
-            <p className="font-heading text-lg font-extrabold tracking-tight text-white sm:text-xl">
+            <p className="font-heading text-lg font-bold tracking-tight text-white sm:text-xl">
               {trustBarConfig.headline}
             </p>
             <p className="text-sm text-muted-foreground">

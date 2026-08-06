@@ -1,7 +1,10 @@
+"use client";
+
 import { ShoppingBag } from "lucide-react";
 import type { ReactNode } from "react";
 
 import { Button } from "@/components/ui/button";
+import { trackConversionEvent } from "@/lib/analytics/events";
 import { cn } from "@/lib/utils";
 
 interface BobshopOrderButtonProps {
@@ -10,6 +13,7 @@ interface BobshopOrderButtonProps {
   size?: "default" | "sm" | "lg";
   showIcon?: boolean;
   children?: ReactNode;
+  eventSource?: string;
 }
 
 export function BobshopOrderButton({
@@ -18,6 +22,7 @@ export function BobshopOrderButton({
   size = "lg",
   showIcon = true,
   children = "Order on Bobshop",
+  eventSource,
 }: BobshopOrderButtonProps) {
   return (
     <Button
@@ -28,6 +33,11 @@ export function BobshopOrderButton({
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Order on Bobshop"
+          onClick={() => {
+            if (eventSource) {
+              trackConversionEvent("bobshop_click", { source: eventSource });
+            }
+          }}
         />
       }
       variant="outline"

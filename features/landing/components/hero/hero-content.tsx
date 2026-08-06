@@ -4,6 +4,7 @@ import { motion, useReducedMotion, type Variants } from "framer-motion";
 
 import { GlassCard } from "@/components/shared/glass-card";
 import { CallButton } from "@/features/orders/components/call-button";
+import { HeroChannelRouter } from "@/features/landing/components/hero/hero-channel-router";
 import { WhatsAppOrderButton } from "@/features/orders/components/whatsapp-order-button";
 import { heroUseCases, heroTrustChips } from "@/lib/config/hero";
 import { formatPriceCompact } from "@/lib/utils/format";
@@ -96,8 +97,12 @@ export function HeroContent({ product, whatsappUrl }: HeroContentProps) {
         variants={shouldReduceMotion ? undefined : itemVariants}
         className="mt-10 flex flex-col gap-4 sm:flex-row"
       >
-        <WhatsAppOrderButton href={whatsappUrl} />
-        <CallButton />
+        <WhatsAppOrderButton href={whatsappUrl} eventSource="hero" />
+        <CallButton eventSource="hero" />
+      </motion.div>
+
+      <motion.div variants={shouldReduceMotion ? undefined : itemVariants}>
+        <HeroChannelRouter whatsappUrl={whatsappUrl} />
       </motion.div>
 
       <motion.ul

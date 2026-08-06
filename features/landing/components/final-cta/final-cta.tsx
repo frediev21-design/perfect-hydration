@@ -66,13 +66,13 @@ export function FinalCta({ whatsappUrl }: FinalCtaProps) {
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap">
-            <WhatsAppOrderButton href={whatsappUrl}>
+            <WhatsAppOrderButton href={whatsappUrl} eventSource="final_cta">
               {finalCtaSection.whatsappLabel}
             </WhatsAppOrderButton>
-            <BobshopOrderButton href={bobshopConfig.url}>
+            <BobshopOrderButton href={bobshopConfig.url} eventSource="final_cta">
               {finalCtaSection.bobshopLabel}
             </BobshopOrderButton>
-            <CallButton>{finalCtaSection.callLabel}</CallButton>
+            <CallButton eventSource="final_cta">{finalCtaSection.callLabel}</CallButton>
           </div>
         </GlassCard>
       </motion.div>

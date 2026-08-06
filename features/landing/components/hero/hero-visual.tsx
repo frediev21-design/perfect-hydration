@@ -60,22 +60,7 @@ export function HeroVisual() {
               }
         }
       >
-        <motion.div
-          className="relative z-10"
-          animate={
-            shouldReduceMotion
-              ? undefined
-              : {
-                  y: [0, -14, 0],
-                  rotate: [-2, 2, -2],
-                }
-          }
-          transition={{
-            duration: 7,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        >
+        <div className="relative z-10">
           <Image
             src={assetPaths.hero.visual}
             alt={assetPaths.hero.visualAlt}
@@ -85,7 +70,7 @@ export function HeroVisual() {
             className="h-auto w-full object-contain drop-shadow-[0_30px_60px_rgba(0,174,239,0.28)]"
             sizes="(max-width: 1024px) 80vw, 40vw"
           />
-        </motion.div>
+        </div>
 
         <div
           aria-hidden

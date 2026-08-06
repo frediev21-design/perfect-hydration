@@ -1,6 +1,9 @@
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Section } from "@/components/shared/section";
-import { TestimonialCarousel } from "@/features/landing/components/testimonials/testimonial-carousel";
+import {
+  TestimonialGrid,
+  TestimonialReviewLinks,
+} from "@/features/landing/components/testimonials/testimonial-grid";
 import { testimonialsSection } from "@/lib/config/testimonials";
 
 export function Testimonials() {
@@ -13,7 +16,8 @@ export function Testimonials() {
         align="center"
         className="mx-auto"
       />
-      <TestimonialCarousel />
+      <TestimonialGrid />
+      <TestimonialReviewLinks />
     </Section>
   );
 }

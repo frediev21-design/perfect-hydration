@@ -1,7 +1,10 @@
+"use client";
+
 import { MessageCircle } from "lucide-react";
 import type { ReactNode } from "react";
 
 import { Button } from "@/components/ui/button";
+import { trackConversionEvent } from "@/lib/analytics/events";
 import { cn } from "@/lib/utils";
 
 interface WhatsAppOrderButtonProps {
@@ -10,6 +13,8 @@ interface WhatsAppOrderButtonProps {
   size?: "default" | "sm" | "lg";
   showIcon?: boolean;
   children?: ReactNode;
+  eventSource?: string;
+  quantity?: number;
 }
 
 export function WhatsAppOrderButton({
@@ -18,6 +23,8 @@ export function WhatsAppOrderButton({
   size = "lg",
   showIcon = true,
   children = "Order via WhatsApp",
+  eventSource,
+  quantity,
 }: WhatsAppOrderButtonProps) {
   return (
     <Button
@@ -28,6 +35,14 @@ export function WhatsAppOrderButton({
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Order via WhatsApp"
+          onClick={() => {
+            if (eventSource) {
+              trackConversionEvent("whatsapp_click", {
+                source: eventSource,
+                ...(quantity !== undefined ? { quantity } : {}),
+              });
+            }
+          }}
         />
       }
       size={size}

@@ -5,7 +5,7 @@ import { whyUsFeatures } from "@/lib/config/why-us";
 
 export function WhyUsGrid() {
   return (
-    <div className="mt-14 grid gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-7">
+    <div className="mt-14 grid gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 lg:gap-6">
       {whyUsFeatures.map((feature, index) => (
         <FeatureCard
           key={feature.id}

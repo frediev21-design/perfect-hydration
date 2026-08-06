@@ -56,7 +56,7 @@ export function ApplicationIconCard({
           <Icon aria-hidden className="size-7" />
         </motion.div>
 
-        <h3 className="font-heading text-base font-extrabold text-white">
+        <h3 className="font-heading text-base font-bold text-white">
           {title}
         </h3>
         <p className="mt-2 text-sm leading-relaxed text-muted-foreground">

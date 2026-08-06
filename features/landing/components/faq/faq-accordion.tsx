@@ -33,7 +33,7 @@ function FaqAccordionItem({
           onClick={onToggle}
           className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-6"
         >
-          <span className="font-heading text-base font-extrabold text-white sm:text-lg">
+          <span className="font-heading text-base font-bold text-white sm:text-lg">
             {item.question}
           </span>
           <ChevronDown

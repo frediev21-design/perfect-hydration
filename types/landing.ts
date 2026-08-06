@@ -19,6 +19,7 @@ export interface ProductApplication {
   title: string;
   description: string;
   icon: LucideIcon;
+  tier: "primary" | "secondary";
 }
 
 export interface DeionizedWaterUseCase {

@@ -7,14 +7,14 @@ export function DeliveryBobshopCallout() {
   return (
     <GlassCard className="mt-10 flex flex-col items-center gap-5 px-6 py-8 text-center sm:flex-row sm:justify-between sm:text-left">
       <div className="max-w-xl">
-        <h3 className="font-heading text-xl font-extrabold text-white">
+        <h3 className="font-heading text-xl font-bold text-white">
           {deliverySection.bobshopTitle}
         </h3>
         <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
           {deliverySection.bobshopNote}
         </p>
       </div>
-      <BobshopOrderButton href={bobshopConfig.url}>
+      <BobshopOrderButton href={bobshopConfig.url} eventSource="delivery_bobshop">
         {deliverySection.bobshopLabel}
       </BobshopOrderButton>
     </GlassCard>

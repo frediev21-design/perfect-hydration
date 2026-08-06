@@ -77,7 +77,7 @@ export function Footer({ whatsappUrl }: FooterProps) {
 
           {footerLinkGroups.map((group) => (
             <div key={group.title}>
-              <h2 className="font-heading text-xs font-extrabold uppercase tracking-[0.24em] text-white">
+              <h2 className="font-heading text-xs font-bold uppercase tracking-[0.24em] text-white">
                 {group.title}
               </h2>
               <ul className="mt-5 space-y-3">

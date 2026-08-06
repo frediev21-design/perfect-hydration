@@ -37,3 +37,15 @@ export const heroTrustChips = [
   "Pre-filtration · RO · DI",
   "Pretoria, SA",
 ] as const;
+
+export const heroChannelRouter = {
+  label: "Where are you ordering from?",
+  gauteng: {
+    title: "Gauteng → WhatsApp",
+    description: "Same-week local delivery",
+  },
+  nationwide: {
+    title: "Nationwide → Bobshop",
+    description: "Ships anywhere in South Africa",
+  },
+} as const;

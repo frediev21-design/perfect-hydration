@@ -8,10 +8,13 @@ export interface ComparisonFeature {
 export interface Testimonial {
   id: string;
   name: string;
+  businessName: string;
   role: string;
+  suburb: string;
   location: string;
   quote: string;
   rating: number;
+  source: "direct" | "bobshop";
 }
 
 export interface FaqItem {

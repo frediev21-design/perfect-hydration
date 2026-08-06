@@ -34,6 +34,7 @@ export function StickyMobileCta({ whatsappUrl }: StickyMobileCtaProps) {
               href={whatsappUrl}
               size="sm"
               className="shrink-0 px-5"
+              eventSource="sticky_mobile_cta"
             >
               {stickyCtaConfig.label}
             </WhatsAppOrderButton>

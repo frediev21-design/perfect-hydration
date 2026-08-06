@@ -32,7 +32,7 @@ export function DeliveryAreas() {
             <span className="flex size-9 items-center justify-center rounded-full border border-brand-accent/20 bg-brand-accent/10 text-brand-accent">
               <Truck aria-hidden className="size-4" />
             </span>
-            <h3 className="font-heading text-lg font-extrabold text-white">
+            <h3 className="font-heading text-lg font-bold text-white">
               {area.name}
             </h3>
           </div>

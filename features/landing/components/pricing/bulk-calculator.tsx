@@ -5,6 +5,7 @@ import { useMemo, useState } from "react";
 
 import { GlassCard } from "@/components/shared/glass-card";
 import { Button } from "@/components/ui/button";
+import { trackConversionEvent } from "@/lib/analytics/events";
 import {
   calculatorLimits,
   pricingSection,
@@ -123,7 +124,7 @@ export function BulkCalculator({
 
           <div className="flex items-baseline gap-2 text-center">
             <p
-              className="font-heading text-6xl font-extrabold tracking-tight text-white sm:text-7xl"
+              className="font-heading text-6xl font-bold tracking-tight text-white sm:text-7xl"
               aria-live="polite"
               aria-atomic="true"
             >
@@ -155,7 +156,7 @@ export function BulkCalculator({
               variant="outline"
               onClick={() => setClampedQuantity(preset)}
               className={cn(
-                "min-w-14 rounded-xl border-white/15 bg-white/5 font-heading text-base font-extrabold text-white hover:bg-white/10",
+                "min-w-14 rounded-xl border-white/15 bg-white/5 font-heading text-base font-bold text-white hover:bg-white/10",
                 calculation.quantity === preset &&
                   "border-brand-accent bg-brand-accent/15 text-brand-accent hover:bg-brand-accent/20",
               )}
@@ -231,10 +232,10 @@ export function BulkCalculator({
         </div>
 
         <div className="mt-6 flex items-end justify-between gap-4 border-t border-white/8 pt-6">
-          <span className="font-heading text-lg font-extrabold text-white">
+          <span className="font-heading text-lg font-bold text-white">
             Total
           </span>
-          <span className="font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
+          <span className="font-heading text-4xl font-bold tracking-tight text-white sm:text-5xl">
             {formatCurrency(calculation.total)}
           </span>
         </div>
@@ -248,6 +249,12 @@ export function BulkCalculator({
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Order now via WhatsApp"
+                onClick={() => {
+                  trackConversionEvent("whatsapp_click", {
+                    source: "bulk_calculator_order",
+                    quantity: calculation.quantity,
+                  });
+                }}
               />
             }
             className="h-12 w-full rounded-xl bg-brand-accent text-base font-semibold text-white hover:bg-brand-accent/90"
@@ -264,6 +271,12 @@ export function BulkCalculator({
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Request a quote via WhatsApp"
+                onClick={() => {
+                  trackConversionEvent("whatsapp_click", {
+                    source: "bulk_calculator_quote",
+                    quantity: calculation.quantity,
+                  });
+                }}
               />
             }
             variant="outline"

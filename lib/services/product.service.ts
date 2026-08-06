@@ -31,11 +31,11 @@ const deionizedWater5L: Product = {
     "Industrial Processes",
   ],
   specifications: [
-    { label: "Volume", value: "5 Litres" },
-    { label: "Treatment", value: "Pre-filtration + RO + DI" },
-    { label: "Conductivity", value: "≤1 µS/cm" },
+    { label: "Conductivity", value: "≤1 µS/cm @ 25°C" },
     { label: "TDS", value: "≤1 mg/L" },
-    { label: "pH", value: "5–6.7" },
+    { label: "pH", value: "5.0–6.7" },
+    { label: "Treatment", value: "Pre-filtration + RO + DI" },
+    { label: "Volume", value: "5 Litres" },
   ],
   seo: {
     title: "5L Automotive Grade Deionised Water | Perfect Hydration",

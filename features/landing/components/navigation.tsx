@@ -106,8 +106,8 @@ export function Navigation({ whatsappUrl }: NavigationProps) {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <CallButton size="sm" className="hidden xl:inline-flex" />
-          <WhatsAppOrderButton href={whatsappUrl} size="sm" />
+          <CallButton size="sm" className="hidden xl:inline-flex" eventSource="nav_desktop" />
+          <WhatsAppOrderButton href={whatsappUrl} size="sm" eventSource="nav_desktop" />
         </div>
 
         <Button
@@ -152,8 +152,8 @@ export function Navigation({ whatsappUrl }: NavigationProps) {
               </nav>
 
               <div className="flex flex-col gap-3 border-t border-white/8 pt-6">
-                <WhatsAppOrderButton href={whatsappUrl} />
-                <CallButton showIcon />
+                <WhatsAppOrderButton href={whatsappUrl} eventSource="nav_mobile" />
+                <CallButton showIcon eventSource="nav_mobile" />
               </div>
             </Container>
           </motion.div>

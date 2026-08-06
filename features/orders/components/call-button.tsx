@@ -1,7 +1,10 @@
+"use client";
+
 import { Phone } from "lucide-react";
 import type { ReactNode } from "react";
 
 import { Button } from "@/components/ui/button";
+import { trackConversionEvent } from "@/lib/analytics/events";
 import { siteConfig } from "@/lib/config/site";
 import { cn } from "@/lib/utils";
 
@@ -10,6 +13,7 @@ interface CallButtonProps {
   size?: "default" | "sm" | "lg";
   showIcon?: boolean;
   children?: ReactNode;
+  eventSource?: string;
 }
 
 export function CallButton({
@@ -17,6 +21,7 @@ export function CallButton({
   size = "lg",
   showIcon = false,
   children = "Call Now",
+  eventSource,
 }: CallButtonProps) {
   return (
     <Button
@@ -25,6 +30,11 @@ export function CallButton({
         <a
           href={`tel:${siteConfig.contact.phoneTel}`}
           aria-label={`Call ${siteConfig.name}`}
+          onClick={() => {
+            if (eventSource) {
+              trackConversionEvent("call_click", { source: eventSource });
+            }
+          }}
         />
       }
       variant="outline"
