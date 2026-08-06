@@ -3,8 +3,10 @@
 import { motion, useReducedMotion } from "framer-motion";
 
 import { GlassCard } from "@/components/shared/glass-card";
+import { BobshopOrderButton } from "@/features/orders/components/bobshop-order-button";
 import { CallButton } from "@/features/orders/components/call-button";
 import { WhatsAppOrderButton } from "@/features/orders/components/whatsapp-order-button";
+import { bobshopConfig } from "@/lib/config/bobshop";
 import { finalCtaSection } from "@/lib/config/final-cta";
 import { siteConfig } from "@/lib/config/site";
 
@@ -63,10 +65,13 @@ export function FinalCta({ whatsappUrl }: FinalCtaProps) {
             {siteConfig.commerce.freeDeliveryThreshold}+ bottles = free delivery
           </p>
 
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap">
             <WhatsAppOrderButton href={whatsappUrl}>
               {finalCtaSection.whatsappLabel}
             </WhatsAppOrderButton>
+            <BobshopOrderButton href={bobshopConfig.url}>
+              {finalCtaSection.bobshopLabel}
+            </BobshopOrderButton>
             <CallButton>{finalCtaSection.callLabel}</CallButton>
           </div>
         </GlassCard>

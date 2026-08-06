@@ -24,13 +24,19 @@ export const faqItems: FaqItem[] = [
     id: "how-to-order",
     question: "How do I place an order?",
     answer:
-      "Tap Order via WhatsApp anywhere on the site. A pre-filled message opens in WhatsApp — add your quantity and delivery address, and our team will confirm your order.",
+      "Tap Order via WhatsApp anywhere on the site for Gauteng delivery — a pre-filled message opens in WhatsApp. Add your quantity and delivery address, and our team will confirm your order. For nationwide delivery, use Order on Bobshop.",
   },
   {
     id: "delivery-areas",
     question: "Which areas do you deliver to?",
     answer:
-      "We deliver across Gauteng including Pretoria, Centurion, Johannesburg, Midrand, East Rand, and West Rand. Contact us via WhatsApp if you are unsure about your area.",
+      "We deliver directly across Gauteng including Pretoria, Centurion, Johannesburg, Midrand, East Rand, and West Rand — order via WhatsApp. Outside Gauteng? Order on Bobshop for nationwide delivery across South Africa.",
+  },
+  {
+    id: "outside-gauteng",
+    question: "Can I order if I'm outside Gauteng?",
+    answer:
+      "Yes. Perfect Hydration is available on Bobshop with delivery nationwide across South Africa. Use the Order on Bobshop button on our delivery section or footer to shop directly on Bobshop.",
   },
   {
     id: "free-delivery",
@@ -48,6 +54,6 @@ export const faqItems: FaqItem[] = [
     id: "payment",
     question: "What payment methods do you accept?",
     answer:
-      "Payment details are confirmed when you order via WhatsApp. Online card payments will be available in a future update to the Perfect Hydration platform.",
+      "Order via WhatsApp for direct Gauteng delivery, or shop on Bobshop for nationwide shipping. Payment details for WhatsApp orders are confirmed when you message us. Bobshop accepts card, EFT, and other marketplace payment options.",
   },
 ];

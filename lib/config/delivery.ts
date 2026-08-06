@@ -8,6 +8,10 @@ export const deliverySection = {
   mapLabel: "Delivery coverage map",
   coverageNote:
     "Serving major hubs and surrounding suburbs across Gauteng. Contact us for areas outside the map.",
+  bobshopTitle: "Outside Gauteng?",
+  bobshopNote:
+    "Also available on Bobshop with delivery nationwide across South Africa.",
+  bobshopLabel: "Order on Bobshop",
 } as const;
 
 export const deliveryAreas: DeliveryArea[] = [

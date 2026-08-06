@@ -21,5 +21,12 @@ export const siteConfig = {
     vatRate: env.NEXT_PUBLIC_VAT_RATE,
     freeDeliveryThreshold: env.NEXT_PUBLIC_FREE_DELIVERY_THRESHOLD,
     deliveryFee: env.NEXT_PUBLIC_DELIVERY_FEE,
+    bobshopUrl: env.NEXT_PUBLIC_BOBSHOP_URL,
+  },
+  channels: {
+    bobshop: {
+      url: env.NEXT_PUBLIC_BOBSHOP_URL,
+      label: "Order on Bobshop",
+    },
   },
 } as const;

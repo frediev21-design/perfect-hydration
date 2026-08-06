@@ -37,6 +37,7 @@ export const footerLinkGroups: FooterLinkGroup[] = [
     title: "Contact",
     links: [
       { label: "Order via WhatsApp", href: "whatsapp", external: true },
+      { label: "Order on Bobshop", href: "bobshop", external: true },
       { label: "Call Us", href: "tel", external: true },
       { label: "Email Us", href: "mailto", external: true },
     ],

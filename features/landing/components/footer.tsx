@@ -6,6 +6,7 @@ import { FacebookIcon } from "@/components/shared/icons/facebook-icon";
 import { Logo } from "@/components/shared/logo";
 import { Container } from "@/components/shared/container";
 import { footerLinkGroups } from "@/lib/config/navigation";
+import { bobshopConfig } from "@/lib/config/bobshop";
 import { siteConfig } from "@/lib/config/site";
 
 interface FooterProps {
@@ -19,6 +20,8 @@ function resolveContactHref(
   switch (href) {
     case "whatsapp":
       return { href: whatsappUrl, external: true };
+    case "bobshop":
+      return { href: bobshopConfig.url, external: true };
     case "tel":
       return { href: `tel:${siteConfig.contact.phoneTel}`, external: true };
     case "mailto":
@@ -86,9 +89,9 @@ export function Footer({ whatsappUrl }: FooterProps) {
                       {resolved.external ? (
                         <a
                           href={resolved.href}
-                          target={link.href === "whatsapp" ? "_blank" : undefined}
+                          target={link.href === "whatsapp" || link.href === "bobshop" ? "_blank" : undefined}
                           rel={
-                            link.href === "whatsapp"
+                            link.href === "whatsapp" || link.href === "bobshop"
                               ? "noopener noreferrer"
                               : undefined
                           }

@@ -9,6 +9,7 @@ const envSchema = z.object({
   NEXT_PUBLIC_VAT_RATE: z.coerce.number().min(0).max(1),
   NEXT_PUBLIC_FREE_DELIVERY_THRESHOLD: z.coerce.number().int().positive(),
   NEXT_PUBLIC_DELIVERY_FEE: z.coerce.number().min(0),
+  NEXT_PUBLIC_BOBSHOP_URL: z.url(),
   NEXT_PUBLIC_GA_MEASUREMENT_ID: z.string().optional(),
   NEXT_PUBLIC_META_PIXEL_ID: z.string().optional(),
   NEXT_PUBLIC_GTM_ID: z.string().optional(),
@@ -37,6 +38,9 @@ export function getEnv(): Env {
     NEXT_PUBLIC_FREE_DELIVERY_THRESHOLD:
       process.env.NEXT_PUBLIC_FREE_DELIVERY_THRESHOLD ?? "6",
     NEXT_PUBLIC_DELIVERY_FEE: process.env.NEXT_PUBLIC_DELIVERY_FEE ?? "80",
+    NEXT_PUBLIC_BOBSHOP_URL:
+      process.env.NEXT_PUBLIC_BOBSHOP_URL ??
+      "https://www.bobshop.co.za/perfect-hydration-5l-automotive-grade-deionized-water-ultra-pure-battery-radiator-coolant-wat/p/690408606",
     NEXT_PUBLIC_GA_MEASUREMENT_ID: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID,
     NEXT_PUBLIC_META_PIXEL_ID: process.env.NEXT_PUBLIC_META_PIXEL_ID,
     NEXT_PUBLIC_GTM_ID: process.env.NEXT_PUBLIC_GTM_ID,
