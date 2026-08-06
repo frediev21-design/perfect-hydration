@@ -1,16 +1,21 @@
+export const heroProductImage = {
+  src: "/images/hero-cinematic.png",
+  alt: "Perfect Hydration 5 litre ultra pure deionised water with water splash effects",
+  width: 682,
+  height: 1024,
+} as const;
+
 export const assetPaths = {
   hero: {
-    visual: "/images/hero-cinematic.png",
-    visualAlt:
-      "Perfect Hydration 5 litre ultra pure deionised water with water splash effects",
+    visual: heroProductImage.src,
+    visualAlt: heroProductImage.alt,
   },
   product: {
-    bottle5L: "/images/hero-bottle.png",
-    bottle5LAlt:
-      "5 litre Perfect Hydration automotive grade deionised water bottle",
+    bottle5L: heroProductImage.src,
+    bottle5LAlt: heroProductImage.alt,
   },
   social: {
-    ogImage: "/images/PerfectHydration_FB_IG_Square.png",
+    ogImage: heroProductImage.src,
   },
   brand: {
     logo: "/images/perfect-hydration-logo.png",

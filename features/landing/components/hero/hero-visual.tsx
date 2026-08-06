@@ -10,7 +10,7 @@ import {
 import Image from "next/image";
 import { useEffect } from "react";
 
-import { assetPaths } from "@/lib/config/hero";
+import { assetPaths, heroProductImage } from "@/lib/config/hero";
 import { useMouseParallax } from "@/hooks/use-mouse-parallax";
 
 export function HeroVisual() {
@@ -79,8 +79,8 @@ export function HeroVisual() {
           <Image
             src={assetPaths.hero.visual}
             alt={assetPaths.hero.visualAlt}
-            width={408}
-            height={612}
+            width={heroProductImage.width}
+            height={heroProductImage.height}
             priority
             className="h-auto w-full object-contain drop-shadow-[0_30px_60px_rgba(0,174,239,0.28)]"
             sizes="(max-width: 1024px) 80vw, 40vw"

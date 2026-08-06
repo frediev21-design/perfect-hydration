@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { assetPaths } from "@/lib/config/hero";
+import { assetPaths, heroProductImage } from "@/lib/config/hero";
 import { siteConfig } from "@/lib/config/site";
 
 const defaultOgImage = assetPaths.social.ogImage;
@@ -42,7 +42,14 @@ export function createMetadata({
       siteName: siteConfig.name,
       title: pageTitle,
       description: pageDescription,
-      images: [{ url: image, width: 1254, height: 1254, alt: pageTitle }],
+      images: [
+        {
+          url: image,
+          width: heroProductImage.width,
+          height: heroProductImage.height,
+          alt: pageTitle,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",

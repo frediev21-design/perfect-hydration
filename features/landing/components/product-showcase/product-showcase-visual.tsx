@@ -4,7 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import { useMemo } from "react";
 
-import { assetPaths } from "@/lib/config/hero";
+import { assetPaths, heroProductImage } from "@/lib/config/hero";
 
 interface Particle {
   id: number;
@@ -82,8 +82,8 @@ export function ProductShowcaseVisual() {
         <Image
           src={assetPaths.product.bottle5L}
           alt={assetPaths.product.bottle5LAlt}
-          width={681}
-          height={1024}
+          width={heroProductImage.width}
+          height={heroProductImage.height}
           loading="lazy"
           className="relative z-10 h-auto w-full object-contain drop-shadow-[0_40px_80px_rgba(0,174,239,0.28)]"
           sizes="(max-width: 1024px) 90vw, 480px"
