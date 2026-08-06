@@ -107,7 +107,13 @@ Set environment variables in your hosting dashboard before deploying.
 - `id="hero"` section anchor
 - Uses product image at `public/images/bottle-5l-deionized-water.jpeg`
 
-**Next:** Sprint 3 — Trust bar + Why Perfect Hydration feature cards
+**Sprint 3 — Trust Bar & Why Us** ✅
+
+- Animated 5-star trust strip with Gauteng industry badges
+- Six glass feature cards with scroll and hover animations
+- Section anchor `id="why"` wired to navigation
+
+**Next:** Sprint 4 — Product Applications grid + Product Showcase
 
 ## License
 
