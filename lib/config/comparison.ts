@@ -7,6 +7,12 @@ export const comparisonSection = {
     "Tap water leaves minerals, scale and corrosion behind. Perfect Hydration is processed to laboratory-grade purity.",
   tapWaterLabel: "Tap Water",
   perfectHydrationLabel: "Perfect Hydration",
+  infographic: {
+    src: "/images/purity-difference.png",
+    alt: "The Purity Difference — Tap water vs Perfect Hydration automotive grade deionized water comparison showing minerals, scale, conductivity, corrosion, and impurities",
+    width: 1024,
+    height: 415,
+  },
 } as const;
 
 export const comparisonFeatures: ComparisonFeature[] = [
