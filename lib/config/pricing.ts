@@ -1,13 +1,27 @@
 export const pricingSection = {
   eyebrow: "Pricing",
-  title: "Simple, Transparent Pricing",
+  title: "Order More, Save More",
   description:
-    "No hidden fees. Order exactly what you need — with free delivery on bulk orders across Gauteng.",
+    "Drag the quantity to see your live total, VAT and delivery — then order straight to WhatsApp.",
   priceLabel: "Only",
   priceSuffix: "Per Bottle",
-  calculatorTitle: "Bulk Order Calculator",
-  calculatorDescription:
-    "Adjust quantity to estimate your total including VAT and delivery.",
-  freeDeliveryLabel: "FREE DELIVERY",
-  freeDeliveryHint: "Free delivery on orders of 6 bottles or more.",
+  quantityLabel: "Quantity",
+  bottlesLabel: "bottles",
+  freeDeliveryUnlocked: "Free delivery unlocked",
+  freeDeliveryHint: "Add more bottles to unlock free delivery",
+  specialOfferLabel: "Special Offer",
+  lineItemLabel: "5L bottle",
+  orderNowLabel: "Order Now",
+  requestQuoteLabel: "Request Quote",
+  freeDeliveryLabel: "FREE",
+  effectiveCostLabel: "Effective cost per bottle",
+  deliverySavingsPrefix: "You saved",
+  deliverySavingsSuffix: "on delivery",
+} as const;
+
+export const quantityPresets = [1, 6, 12, 24] as const;
+
+export const calculatorLimits = {
+  min: 1,
+  max: 50,
 } as const;
