@@ -8,7 +8,7 @@ export interface WhatsAppOrderOptions {
 
 const DEFAULT_ORDER_MESSAGE = `Hi Perfect Hydration,
 
-I would like to order the 5L Automotive Grade Deionized Water.
+I would like to order the 5L Automotive Grade Deionised Water.
 
 Quantity:
 
@@ -16,7 +16,7 @@ Delivery Address:`;
 
 const DEFAULT_QUOTE_MESSAGE = `Hi Perfect Hydration,
 
-I would like to request a quote for the 5L Automotive Grade Deionized Water.
+I would like to request a quote for the 5L Automotive Grade Deionised Water.
 
 Quantity:
 
@@ -24,7 +24,7 @@ Delivery Address:`;
 
 const DEFAULT_BUSINESS_MESSAGE = `Hi Perfect Hydration,
 
-I am interested in a business account for recurring deionized water deliveries.
+I am interested in a business account for recurring deionised water deliveries.
 
 Company name:
 
