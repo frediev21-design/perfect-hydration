@@ -13,3 +13,10 @@ export interface WhyUsFeature {
   highlight?: string;
   icon: LucideIcon;
 }
+
+export interface ProductApplication {
+  id: string;
+  title: string;
+  description: string;
+  icon: LucideIcon;
+}

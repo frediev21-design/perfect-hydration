@@ -1,4 +1,8 @@
+import { Applications } from "@/features/landing/components/applications/applications";
 import { Hero } from "@/features/landing/components/hero/hero";
+import { PricingSection } from "@/features/landing/components/pricing/pricing-section";
+import { ProductShowcase } from "@/features/landing/components/product-showcase/product-showcase";
+import { Specifications } from "@/features/landing/components/specifications/specifications";
 import { TrustBar } from "@/features/landing/components/trust-bar/trust-bar";
 import { WhyUs } from "@/features/landing/components/why-us/why-us";
 import { getFeaturedProduct } from "@/lib/services/product.service";
@@ -13,6 +17,10 @@ export default async function HomePage() {
       <Hero product={product} whatsappUrl={whatsappUrl} />
       <TrustBar />
       <WhyUs />
+      <Applications />
+      <ProductShowcase />
+      <Specifications product={product} />
+      <PricingSection unitPrice={product.price} />
     </main>
   );
 }

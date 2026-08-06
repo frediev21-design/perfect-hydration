@@ -113,7 +113,20 @@ Set environment variables in your hosting dashboard before deploying.
 - Six glass feature cards with scroll and hover animations
 - Section anchor `id="why"` wired to navigation
 
-**Next:** Sprint 4 — Product Applications grid + Product Showcase
+**Sprint 4 — Applications & Product Showcase** ✅
+
+- Ten animated application icon cards with `id="applications"`
+- Product showcase with hover zoom, rotation, particles, and reflection
+- Section anchor `id="showcase"` for future nav links
+
+**Sprint 5 — Specifications, Pricing & Calculator** ✅
+
+- Glass specification card with RO/DI badges (`id="specifications"`)
+- Animated price display with counter (`id="pricing"`)
+- Bulk calculator with VAT, delivery, and free delivery at 6+ bottles
+- WhatsApp CTA passes selected quantity
+
+**Next:** Sprint 6 — Comparison table, Testimonials carousel, and FAQ accordion
 
 ## License
 
