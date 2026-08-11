@@ -1,5 +1,5 @@
 export const originSection = {
-  eyebrow: "Our Origin",
+  eyebrow: "Quality & Origin",
   title: "Bottled in Pretoria · Tested Before Dispatch",
   description:
     "Every 5L bottle is filled at our Pretoria facility using pre-filtration, reverse osmosis, and deionization — then batch-checked for conductivity before it leaves.",
@@ -8,6 +8,13 @@ export const originSection = {
     region: "Gauteng",
     country: "South Africa",
   },
+  qualitySteps: [
+    { id: "prefiltration", label: "Pre-filtration" },
+    { id: "ro", label: "RO" },
+    { id: "di", label: "DI" },
+    { id: "batch-testing", label: "Batch Testing" },
+    { id: "dispatch", label: "Dispatch" },
+  ],
   pillars: [
     {
       id: "process",

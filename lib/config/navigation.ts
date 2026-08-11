@@ -1,9 +1,9 @@
 import type { FooterLinkGroup, NavLink } from "@/types/navigation";
 
 export const mainNavLinks: NavLink[] = [
-  { label: "Why Us", href: "/#why" },
   { label: "Applications", href: "/#applications" },
   { label: "Pricing", href: "/#pricing" },
+  { label: "Business", href: "/#business" },
   { label: "Checkout", href: "/checkout" },
   { label: "FAQ", href: "/#faq" },
 ];

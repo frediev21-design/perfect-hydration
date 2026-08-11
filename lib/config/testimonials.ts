@@ -5,6 +5,8 @@ export const testimonialsSection = {
   title: "Trusted by Gauteng Workshops",
   description:
     "Feedback from auto workshops, fleets, laboratories, and industrial buyers who rely on measured purity — not tap water.",
+  verificationNote:
+    "Customer feedback shown below. Verify testimonials with our team before using in marketing materials.",
   bobshopSellerRating: "98.59% positive seller rating on Bobshop",
   reviewLinks: [
     {

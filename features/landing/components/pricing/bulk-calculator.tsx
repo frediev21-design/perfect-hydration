@@ -77,9 +77,6 @@ export function BulkCalculator({
     quote: true,
   });
 
-  const effectiveCostPerBottle = calculation.total / calculation.quantity;
-  const deliverySavings = calculation.deliveryIsFree ? deliveryFee : 0;
-
   const setClampedQuantity = (value: number) => {
     setQuantity(
       Math.min(
@@ -88,6 +85,8 @@ export function BulkCalculator({
       ),
     );
   };
+
+  const productLineLabel = `${calculation.quantity} × ${pricingSection.lineItemLabel}`;
 
   return (
     <div className="mt-12 grid gap-6 lg:grid-cols-2">
@@ -180,23 +179,6 @@ export function BulkCalculator({
             className="h-2 w-full cursor-pointer appearance-none rounded-full bg-white/10 accent-brand-accent [&::-moz-range-thumb]:size-5 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-0 [&::-moz-range-thumb]:bg-brand-accent [&::-webkit-slider-thumb]:size-5 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-brand-accent"
           />
         </div>
-
-        <p className="mt-6 text-center text-sm text-muted-foreground">
-          {pricingSection.effectiveCostLabel}:{" "}
-          <span className="font-medium text-brand-success">
-            {formatCurrency(effectiveCostPerBottle)}
-          </span>
-          {deliverySavings > 0 ? (
-            <>
-              {" "}
-              — {pricingSection.deliverySavingsPrefix}{" "}
-              <span className="font-medium text-brand-success">
-                {formatCurrency(deliverySavings)}
-              </span>{" "}
-              {pricingSection.deliverySavingsSuffix}
-            </>
-          ) : null}
-        </p>
       </GlassCard>
 
       <GlassCard className="flex flex-col bg-[rgb(255_255_255/0.04)] p-6 sm:p-8">
@@ -204,23 +186,23 @@ export function BulkCalculator({
           <span className="mb-6 inline-flex w-fit rounded-full border border-brand-success/30 bg-brand-success/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-brand-success">
             {pricingSection.specialOfferLabel}
           </span>
-        ) : (
-          <span className="mb-6 inline-flex w-fit rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-            Live total
-          </span>
-        )}
+        ) : null}
 
         <div className="flex-1 rounded-xl border border-white/10 bg-[rgb(255_255_255/0.03)] px-5 py-1">
           <SummaryRow
-            label={`${calculation.quantity} x ${pricingSection.lineItemLabel}`}
+            label={pricingSection.productLabel}
+            value={productLineLabel}
+          />
+          <SummaryRow
+            label={pricingSection.productTotalLabel}
             value={formatCurrency(calculation.subtotal)}
           />
           <SummaryRow
-            label={`VAT (${Math.round(vatRate * 100)}%)`}
+            label={`${pricingSection.vatLabel} (${Math.round(vatRate * 100)}%)`}
             value={formatCurrency(calculation.vat)}
           />
           <SummaryRow
-            label="Delivery"
+            label={pricingSection.deliveryLabel}
             value={
               calculation.deliveryIsFree
                 ? pricingSection.freeDeliveryLabel
@@ -234,7 +216,7 @@ export function BulkCalculator({
 
         <div className="mt-6 flex items-end justify-between gap-4 border-t border-white/8 pt-6">
           <span className="font-heading text-lg font-bold text-white">
-            Total
+            {pricingSection.totalLabel}
           </span>
           <span className="font-heading text-4xl font-bold tracking-tight text-white sm:text-5xl">
             {formatCurrency(calculation.total)}

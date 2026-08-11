@@ -27,7 +27,7 @@ export function StickyMobileCta({ whatsappUrl }: StickyMobileCtaProps) {
           className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-background/92 px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur-xl lg:hidden"
         >
           <div className="mx-auto flex max-w-lg items-center gap-3">
-            <p className="min-w-0 flex-1 text-xs leading-snug text-muted-foreground">
+            <p className="min-w-0 shrink-0 font-heading text-sm font-bold text-white">
               {stickyCtaConfig.priceHint}
             </p>
             <WhatsAppOrderButton

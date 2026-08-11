@@ -2,16 +2,12 @@
 
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 
-import { GlassCard } from "@/components/shared/glass-card";
-import { CallButton } from "@/features/orders/components/call-button";
-import { HeroChannelRouter } from "@/features/landing/components/hero/hero-channel-router";
+import { BobshopOrderButton } from "@/features/orders/components/bobshop-order-button";
 import { WhatsAppOrderButton } from "@/features/orders/components/whatsapp-order-button";
-import { heroUseCases, heroTrustChips } from "@/lib/config/hero";
-import { formatPriceCompact } from "@/lib/utils/format";
-import type { Product } from "@/types/product";
+import { bobshopConfig } from "@/lib/config/bobshop";
+import { heroContent } from "@/lib/config/hero";
 
 interface HeroContentProps {
-  product: Product;
   whatsappUrl: string;
 }
 
@@ -34,7 +30,7 @@ const itemVariants: Variants = {
   },
 };
 
-export function HeroContent({ product, whatsappUrl }: HeroContentProps) {
+export function HeroContent({ whatsappUrl }: HeroContentProps) {
   const shouldReduceMotion = useReducedMotion();
 
   return (
@@ -48,77 +44,62 @@ export function HeroContent({ product, whatsappUrl }: HeroContentProps) {
         variants={shouldReduceMotion ? undefined : itemVariants}
         className="mb-6 inline-flex w-fit items-center rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.28em] text-brand-accent"
       >
-        {product.grade}
+        {heroContent.eyebrow}
       </motion.p>
 
       <motion.h1
         variants={shouldReduceMotion ? undefined : itemVariants}
         className="font-heading text-5xl leading-[0.95] tracking-tight text-white sm:text-6xl lg:text-7xl xl:text-8xl"
       >
-        Ultra Pure
+        {heroContent.titleLead}
         <br />
-        <span className="text-gradient-accent">Deionised Water</span>
+        <span className="text-gradient-accent">{heroContent.titleAccent}</span>
       </motion.h1>
+
+      <motion.p
+        variants={shouldReduceMotion ? undefined : itemVariants}
+        className="mt-8 max-w-xl text-lg leading-relaxed text-white/90 sm:text-xl"
+      >
+        {heroContent.subline}
+      </motion.p>
+
+      <motion.ul
+        variants={shouldReduceMotion ? undefined : itemVariants}
+        className="mt-6 flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted-foreground"
+        aria-label="Product specifications"
+      >
+        {heroContent.specLine.map((spec) => (
+          <li key={spec} className="flex items-center gap-2">
+            <span
+              aria-hidden
+              className="size-1.5 rounded-full bg-brand-accent"
+            />
+            {spec}
+          </li>
+        ))}
+      </motion.ul>
 
       <motion.div
         variants={shouldReduceMotion ? undefined : itemVariants}
-        className="mt-8 space-y-4"
+        className="mt-8 flex flex-wrap items-baseline gap-x-4 gap-y-1"
       >
-        <p className="text-lg font-medium text-white/90 sm:text-xl">
-          Professional quality for
+        <p className="font-heading text-3xl text-white sm:text-4xl">
+          {heroContent.priceLabel}
         </p>
-        <ul className="flex flex-wrap gap-2.5">
-          {heroUseCases.map((useCase) => (
-            <li
-              key={useCase}
-              className="rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-sm text-muted-foreground"
-            >
-              {useCase}
-            </li>
-          ))}
-        </ul>
-      </motion.div>
-
-      <motion.div variants={shouldReduceMotion ? undefined : itemVariants}>
-        <GlassCard className="mt-10 inline-flex flex-col gap-1 px-6 py-4 sm:flex-row sm:items-end sm:gap-6">
-          <div>
-            <p className="text-sm uppercase tracking-widest text-muted-foreground">
-              From
-            </p>
-            <p className="font-heading text-4xl text-white sm:text-5xl lg:text-6xl">
-              {formatPriceCompact(product.price)}
-            </p>
-          </div>
-          <p className="pb-1 text-sm text-muted-foreground">Per Bottle</p>
-        </GlassCard>
+        <p className="text-sm text-brand-accent">{heroContent.deliveryNote}</p>
       </motion.div>
 
       <motion.div
         variants={shouldReduceMotion ? undefined : itemVariants}
         className="mt-10 flex flex-col gap-4 sm:flex-row"
       >
-        <WhatsAppOrderButton href={whatsappUrl} eventSource="hero" />
-        <CallButton eventSource="hero" />
+        <WhatsAppOrderButton href={whatsappUrl} eventSource="hero">
+          {heroContent.primaryCta}
+        </WhatsAppOrderButton>
+        <BobshopOrderButton href={bobshopConfig.url} eventSource="hero">
+          {heroContent.secondaryCta}
+        </BobshopOrderButton>
       </motion.div>
-
-      <motion.div variants={shouldReduceMotion ? undefined : itemVariants}>
-        <HeroChannelRouter whatsappUrl={whatsappUrl} />
-      </motion.div>
-
-      <motion.ul
-        variants={shouldReduceMotion ? undefined : itemVariants}
-        className="mt-6 flex flex-wrap gap-2.5"
-        aria-label="Product quality indicators"
-      >
-        {heroTrustChips.map((chip) => (
-          <li
-            key={chip}
-            className="rounded-full border border-brand-accent/25 bg-brand-accent/10 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-brand-accent"
-          >
-            {chip}
-          </li>
-        ))}
-      </motion.ul>
     </motion.div>
   );
 }

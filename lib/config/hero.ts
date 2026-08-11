@@ -1,6 +1,6 @@
 export const heroProductImage = {
   src: "/images/hero-cinematic.png",
-  alt: "Perfect Hydration 5 litre ultra pure deionised water with water splash effects",
+  alt: "Perfect Hydration 5 litre ultra pure deionised water bottle for automotive and industrial applications",
   width: 682,
   height: 1024,
 } as const;
@@ -24,28 +24,19 @@ export const assetPaths = {
   },
 } as const;
 
-export const heroUseCases = [
-  "Battery Top-up",
-  "Radiators",
-  "Coolant Mixing",
-  "Laboratories",
-  "Manufacturing",
-] as const;
-
-export const heroTrustChips = [
-  "≤1 µS/cm",
-  "Pre-filtration · RO · DI",
-  "Pretoria, SA",
-] as const;
-
-export const heroChannelRouter = {
-  label: "Where are you ordering from?",
-  gauteng: {
-    title: "Gauteng → WhatsApp",
-    description: "Same-week local delivery",
-  },
-  nationwide: {
-    title: "Nationwide → Bobshop",
-    description: "Ships anywhere in South Africa",
-  },
+export const heroContent = {
+  eyebrow: "Automotive Grade",
+  titleLead: "Ultra Pure",
+  titleAccent: "Deionised Water",
+  subline:
+    "Professional-grade deionised water for automotive, industrial and precision applications.",
+  specLine: [
+    "≤1 µS/cm conductivity",
+    "Pre-filtration + RO + DI",
+    "Bottled & tested in Pretoria",
+  ],
+  priceLabel: "From R69 per 5L",
+  deliveryNote: "Gauteng delivery available",
+  primaryCta: "Order 5L Now",
+  secondaryCta: "Buy on Bobshop",
 } as const;

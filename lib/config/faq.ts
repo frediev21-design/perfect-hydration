@@ -4,44 +4,86 @@ export const faqSection = {
   eyebrow: "FAQ",
   title: "Questions & Answers",
   description:
-    "Ordering, delivery, and storage — the essentials before you buy.",
+    "Common questions about applications, ordering, delivery, and storage.",
 } as const;
 
 export const faqItems: FaqItem[] = [
   {
-    id: "automotive-use",
-    question: "Can I use this for car batteries and radiators?",
+    id: "battery-use",
+    question: "Can I use Perfect Hydration for batteries?",
     answer:
-      "Yes. Perfect Hydration deionised water is automotive grade and suitable for battery top-ups, radiator refills, and coolant mixing where low-mineral water is recommended by manufacturers.",
+      "Yes. It is automotive-grade deionised water suitable for battery top-ups where low-mineral water is recommended. Always follow your battery or equipment manufacturer guidance.",
   },
   {
-    id: "how-to-order",
-    question: "How do I place an order?",
+    id: "radiator-use",
+    question: "Can I use it in a radiator?",
     answer:
-      "In Gauteng, tap Order via WhatsApp — a pre-filled message opens with our team. Add your quantity and delivery address. Outside Gauteng, use Order on Bobshop for nationwide delivery.",
+      "Yes. It is suitable for radiator systems and top-ups where low-mineral water is specified. Check your vehicle or equipment requirements before use.",
+  },
+  {
+    id: "coolant-mixing",
+    question: "Can I mix it with coolant?",
+    answer:
+      "Yes. Deionised water is commonly used for coolant mixing where reduced mineral content is preferred. Follow the coolant manufacturer's dilution and compatibility instructions.",
+  },
+  {
+    id: "conductivity",
+    question: "What is the conductivity?",
+    answer:
+      "Perfect Hydration is tested to ≤1 µS/cm @ 25°C, with TDS ≤1 mg/L and pH in the 5.0–6.7 range.",
+  },
+  {
+    id: "purification",
+    question: "How is the water purified?",
+    answer:
+      "Each batch is processed through pre-filtration, reverse osmosis (RO), and deionisation (DI) before bottling.",
+  },
+  {
+    id: "testing",
+    question: "How is it tested?",
+    answer:
+      "Production batches are conductivity-checked against our specification before dispatch from our Pretoria facility.",
+  },
+  {
+    id: "bottling-location",
+    question: "Where is it bottled?",
+    answer:
+      "Perfect Hydration is bottled and batch-tested in Pretoria, Gauteng, South Africa.",
   },
   {
     id: "delivery-areas",
-    question: "Which areas do you deliver to?",
+    question: "Where do you deliver?",
     answer:
-      "We deliver directly across Gauteng including Pretoria, Centurion, Johannesburg, Midrand, East Rand, and West Rand. Outside Gauteng? Order on Bobshop for nationwide delivery across South Africa.",
+      "We deliver across Gauteng including Pretoria, Centurion, Midrand, Johannesburg, East Rand, and West Rand. For nationwide delivery, order through Bobshop.",
   },
   {
     id: "free-delivery",
     question: "When is delivery free?",
     answer:
-      "Orders of 6 bottles or more qualify for free delivery in Gauteng. Use the bulk calculator on the pricing section to estimate your total including VAT.",
+      "Orders of 6 bottles or more qualify for free delivery in Gauteng. Use the order calculator to see your total including VAT.",
   },
   {
     id: "storage",
     question: "How should I store the water?",
     answer:
-      "Store bottles upright in a cool, shaded area with caps sealed. Avoid direct sunlight and contamination. Use within a reasonable period once opened for best results.",
+      "Store bottles upright in a cool, shaded area with caps sealed. Avoid direct sunlight and contamination. Use within a reasonable period once opened.",
   },
   {
-    id: "payment",
-    question: "What payment methods do you accept?",
+    id: "bulk-orders",
+    question: "Can I buy in bulk?",
     answer:
-      "Checkout online via PayFast (card, EFT, Instant EFT) or PayPal for Gauteng delivery. You can also order via WhatsApp — payment details confirmed when you message us. For nationwide orders, Bobshop accepts card, EFT, and other marketplace payment options.",
+      "Yes. Order 6 bottles at R390 (R65 per bottle), or message us for 12+ bottle and recurring supply pricing.",
+  },
+  {
+    id: "business-supply",
+    question: "Do you supply businesses?",
+    answer:
+      "Yes. We support workshops, fleets, laboratories and industrial operations with volume pricing, recurring deliveries, and dedicated account support via WhatsApp.",
+  },
+  {
+    id: "outside-gauteng",
+    question: "Can I order outside Gauteng?",
+    answer:
+      "Direct delivery is available in Gauteng. For nationwide orders, purchase through Bobshop with delivery across South Africa.",
   },
 ];

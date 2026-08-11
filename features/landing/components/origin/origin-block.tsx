@@ -40,6 +40,24 @@ export function OriginBlock() {
               {originSection.location.city}, {originSection.location.region} ·{" "}
               {originSection.location.country}
             </p>
+
+            <ol
+              aria-label="Quality process steps"
+              className="mt-8 flex flex-wrap gap-2"
+            >
+              {originSection.qualitySteps.map((step, index) => (
+                <li key={step.id} className="flex items-center gap-2">
+                  <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-white">
+                    {step.label}
+                  </span>
+                  {index < originSection.qualitySteps.length - 1 ? (
+                    <span aria-hidden className="text-brand-accent/60">
+                      →
+                    </span>
+                  ) : null}
+                </li>
+              ))}
+            </ol>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">

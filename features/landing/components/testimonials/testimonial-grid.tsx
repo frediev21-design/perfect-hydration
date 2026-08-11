@@ -52,11 +52,16 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
 
 export function TestimonialGrid() {
   return (
-    <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-      {testimonials.map((testimonial) => (
-        <TestimonialCard key={testimonial.id} testimonial={testimonial} />
-      ))}
-    </div>
+    <>
+      <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-muted-foreground">
+        {testimonialsSection.verificationNote}
+      </p>
+      <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        {testimonials.map((testimonial) => (
+          <TestimonialCard key={testimonial.id} testimonial={testimonial} />
+        ))}
+      </div>
+    </>
   );
 }
 

@@ -64,6 +64,6 @@ export function createMetadata({
 }
 
 export const rootMetadata = createMetadata({
-  title: "Ultra Pure Deionised Water | Gauteng Delivery",
+  title: "Deionised Water South Africa | Perfect Hydration",
   description: siteConfig.description,
 });

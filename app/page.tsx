@@ -1,4 +1,5 @@
 import { Applications } from "@/features/landing/components/applications/applications";
+import { BusinessSupply } from "@/features/landing/components/business-supply/business-supply";
 import { Comparison } from "@/features/landing/components/comparison/comparison";
 import { DeionizedWater } from "@/features/landing/components/deionized-water/deionized-water";
 import { Delivery } from "@/features/landing/components/delivery/delivery";
@@ -12,6 +13,7 @@ import { Specifications } from "@/features/landing/components/specifications/spe
 import { Testimonials } from "@/features/landing/components/testimonials/testimonials";
 import { TrustBar } from "@/features/landing/components/trust-bar/trust-bar";
 import { WhyUs } from "@/features/landing/components/why-us/why-us";
+import { buildBreadcrumbSchema } from "@/lib/seo/breadcrumb-schema";
 import { JsonLd } from "@/lib/seo/json-ld";
 import { buildOrganizationSchema } from "@/lib/seo/organization-schema";
 import { buildProductSchema } from "@/lib/seo/product-schema";
@@ -23,23 +25,27 @@ export default async function HomePage() {
   const whatsappUrl = buildWhatsAppOrderUrl();
   const productSchema = buildProductSchema(product);
   const organizationSchema = buildOrganizationSchema();
+  const breadcrumbSchema = buildBreadcrumbSchema();
 
   return (
     <main id="main-content" className="relative flex-1" tabIndex={-1}>
-      <JsonLd data={[productSchema, organizationSchema]} />
-      <Hero product={product} whatsappUrl={whatsappUrl} />
+      <JsonLd
+        data={[productSchema, organizationSchema, breadcrumbSchema]}
+      />
+      <Hero whatsappUrl={whatsappUrl} />
       <TrustBar />
       <DeionizedWater />
-      <WhyUs />
       <Applications />
-      <ProductShowcase />
-      <Specifications product={product} />
       <Comparison />
-      <OriginBlock />
+      <BusinessSupply />
       <PricingSection />
+      <OriginBlock />
+      <Specifications product={product} />
+      <ProductShowcase />
+      <WhyUs />
       <Testimonials />
-      <Faq />
       <Delivery />
+      <Faq />
       <FinalCta whatsappUrl={whatsappUrl} />
     </main>
   );

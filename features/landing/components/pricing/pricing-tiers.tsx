@@ -23,6 +23,9 @@ export function PricingTiers() {
         <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
           {bulkPricingSection.description}
         </p>
+        <p className="mt-4 text-sm text-muted-foreground/90">
+          {bulkPricingSection.vatNote}
+        </p>
       </div>
 
       <div className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">

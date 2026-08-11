@@ -1,4 +1,4 @@
 export const stickyCtaConfig = {
-  label: "Order via WhatsApp",
-  priceHint: "From R69 · Free delivery on 6+",
+  label: "Order on WhatsApp",
+  priceHint: "R69 / 5L",
 } as const;

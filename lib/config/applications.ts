@@ -1,103 +1,59 @@
-import {
-  Battery,
-  Building2,
-  CarFront,
-  Droplets,
-  FlaskConical,
-  Microscope,
-  Shirt,
-  Thermometer,
-  Truck,
-  Wrench,
-} from "lucide-react";
-
-import type { ProductApplication } from "@/types/landing";
+import type { ApplicationCategory } from "@/types/landing";
 
 export const applicationsSection = {
   eyebrow: "Applications",
-  title: "Professional Grade for Every Industry",
+  title: "Professional Applications",
   description:
-    "From workshop battery top-ups to laboratory workflows — Perfect Hydration delivers ultra pure water where consistency matters most.",
-  moreUsesLabel: "More uses",
+    "Deionised water for systems where mineral content, conductivity and consistency matter.",
 } as const;
 
-export const productApplications: ProductApplication[] = [
+export const applicationCategories: ApplicationCategory[] = [
   {
-    id: "battery",
-    title: "Battery",
-    description: "Top-up lead-acid and auxiliary batteries without mineral buildup.",
-    icon: Battery,
-    tier: "primary",
+    id: "automotive",
+    title: "Automotive & Workshops",
+    description:
+      "Battery top-ups, radiator systems and coolant preparation.",
+    icon: "wrench",
   },
   {
-    id: "radiator",
-    title: "Radiator",
-    description: "Safe for cooling systems that require low-mineral water.",
-    icon: Thermometer,
-    tier: "primary",
+    id: "fleets",
+    title: "Fleets",
+    description: "Reliable water supply for routine fleet maintenance.",
+    icon: "truck",
   },
   {
-    id: "coolant",
-    title: "Coolant",
-    description: "Ideal for mixing concentrates to manufacturer specifications.",
-    icon: Droplets,
-    tier: "primary",
-  },
-  {
-    id: "laboratory",
-    title: "Laboratory",
-    description: "Reliable purity for rinsing, testing, and analytical prep.",
-    icon: FlaskConical,
-    tier: "primary",
+    id: "laboratories",
+    title: "Laboratories",
+    description:
+      "Low-mineral water for rinsing and suitable laboratory applications.",
+    icon: "flask",
   },
   {
     id: "manufacturing",
     title: "Manufacturing",
-    description: "Process water for production lines and quality-sensitive output.",
-    icon: Building2,
-    tier: "primary",
+    description:
+      "Process and equipment applications where low-mineral water is required.",
+    icon: "factory",
+  },
+  {
+    id: "detailing",
+    title: "Detailing",
+    description:
+      "Low-mineral water for applications where residue and spotting matter.",
+    icon: "sparkles",
   },
   {
     id: "industrial",
     title: "Industrial",
-    description: "Workshop and plant applications where purity reduces downtime.",
-    icon: Wrench,
-    tier: "primary",
+    description:
+      "Equipment, cooling and process applications requiring controlled water quality.",
+    icon: "cog",
   },
   {
-    id: "autoclaves",
-    title: "Autoclaves",
-    description: "Supports sterilisation equipment that demands pure feed water.",
-    icon: Microscope,
-    tier: "secondary",
-  },
-  {
-    id: "fleet",
-    title: "Fleet",
-    description: "Keep commercial vehicles and equipment running at peak performance.",
-    icon: Truck,
-    tier: "secondary",
-  },
-  {
-    id: "car-detailing",
-    title: "Car Detailing",
-    description: "Spot-free rinsing for premium paintwork and glass finishes.",
-    icon: CarFront,
-    tier: "secondary",
-  },
-  {
-    id: "steam-irons",
-    title: "Steam Irons",
-    description: "Prevents scale and spotting in garment care applications.",
-    icon: Shirt,
-    tier: "secondary",
+    id: "laser-cooling",
+    title: "CO₂ Laser Cooling",
+    description:
+      "Suitable for systems where low-mineral cooling water is specified.",
+    icon: "zap",
   },
 ];
-
-export const primaryApplications = productApplications.filter(
-  (application) => application.tier === "primary",
-);
-
-export const secondaryApplications = productApplications.filter(
-  (application) => application.tier === "secondary",
-);

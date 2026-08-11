@@ -2,16 +2,15 @@ import type { DeliveryArea } from "@/types/content";
 
 export const deliverySection = {
   eyebrow: "Delivery",
-  title: "Gauteng-Wide Coverage",
+  title: "Gauteng Delivery Available",
   description:
-    "Fast, reliable delivery to homes, workshops, fleets, and industrial sites across the province. Not sure about your area? Message us on WhatsApp.",
+    "Direct delivery across major Gauteng hubs. For nationwide orders, purchase through Bobshop.",
   mapLabel: "Delivery coverage map",
-  coverageNote:
-    "Serving major hubs and surrounding suburbs across Gauteng. Contact us for areas outside the map.",
-  bobshopTitle: "Outside Gauteng?",
+  coverageNote: "Gauteng delivery available.",
+  bobshopTitle: "Nationwide via Bobshop",
   bobshopNote:
-    "Also available on Bobshop with delivery nationwide across South Africa.",
-  bobshopLabel: "Order on Bobshop",
+    "For orders outside Gauteng, purchase through Bobshop with delivery across South Africa.",
+  bobshopLabel: "Buy on Bobshop",
 } as const;
 
 export const deliveryAreas: DeliveryArea[] = [

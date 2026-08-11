@@ -2,9 +2,9 @@ import { env } from "@/lib/config/env";
 
 export const siteConfig = {
   name: "Perfect Hydration",
-  tagline: "Hydration That Does More",
+  tagline: "Ultra Pure. Clean. Consistent.",
   description:
-    "Ultra pure automotive grade deionised water for batteries, radiators, laboratories, and industrial applications across Gauteng.",
+    "Premium deionised water for batteries, radiators, coolant mixing, laboratories, detailing and industrial applications. Bottled and tested in Pretoria. Gauteng delivery and nationwide ordering via Bobshop.",
   url: env.NEXT_PUBLIC_SITE_URL,
   locale: "en-ZA",
   currency: "ZAR",
@@ -28,5 +28,11 @@ export const siteConfig = {
       url: env.NEXT_PUBLIC_BOBSHOP_URL,
       label: "Order on Bobshop",
     },
+  },
+  location: {
+    city: "Pretoria",
+    region: "Gauteng",
+    country: "South Africa",
+    display: "Pretoria, Gauteng, South Africa",
   },
 } as const;

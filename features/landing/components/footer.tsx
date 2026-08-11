@@ -70,7 +70,7 @@ export function Footer({ whatsappUrl }: FooterProps) {
               </p>
               <p className="flex items-center gap-3">
                 <MapPin aria-hidden className="size-4 shrink-0 text-brand-accent" />
-                <span>Serving Gauteng, South Africa</span>
+                <span>{siteConfig.location.display}</span>
               </p>
             </div>
           </div>
@@ -134,7 +134,7 @@ export function Footer({ whatsappUrl }: FooterProps) {
         </div>
 
         <p className="mt-8 text-center text-xs font-semibold uppercase tracking-[0.28em] text-brand-accent">
-          Ultra Pure. Clean. Consistent. Every Time.
+          {siteConfig.tagline}
         </p>
       </Container>
     </footer>

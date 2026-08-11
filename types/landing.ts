@@ -22,6 +22,22 @@ export interface ProductApplication {
   tier: "primary" | "secondary";
 }
 
+export type ApplicationIconKey =
+  | "wrench"
+  | "truck"
+  | "flask"
+  | "factory"
+  | "sparkles"
+  | "cog"
+  | "zap";
+
+export interface ApplicationCategory {
+  id: string;
+  title: string;
+  description: string;
+  icon: ApplicationIconKey;
+}
+
 export interface DeionizedWaterUseCase {
   id: string;
   title: string;
